@@ -1,7 +1,7 @@
 [
 {
-  "modid": "catalyst",
-  "name": "Catalyst",
+  "modid": "reimound",
+  "name": "Reimound",
   "description": "A Forge Utility Client specifically designed for the anarchy environment. ",
   "version": "${version}",
   "mcversion": "${mcversion}",

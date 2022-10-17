@@ -23,7 +23,7 @@ public class DebugInfo extends Command {
     public void runCommand(String s, String[] args) {
 
         final PasteBuilder paste = new PasteBuilder()
-            .setName("Catalyst Debug Infos");
+            .setName("Reimound Debug Infos");
 
         paste.addContent("mods.csv", Loader
             .instance()
