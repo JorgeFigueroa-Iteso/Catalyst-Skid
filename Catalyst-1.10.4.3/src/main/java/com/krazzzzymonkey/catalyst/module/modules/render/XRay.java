@@ -13,7 +13,7 @@ public class XRay extends Modules {
     public static ArrayList<Block> blocks = new ArrayList<Block>();
 
     public XRay() {
-        super("Wallhack", ModuleCategory.WORLD, "Allows you to see through walls");
+        super("XRay", ModuleCategory.WORLD, "This module currently doesn't work!");
 
 
         blocks.add(Block.getBlockFromName("coal_ore"));
