@@ -20,7 +20,7 @@ public class CatalystRPC {
         presence.startTimestamp = System.currentTimeMillis() / 1000L;
         presence.details = "Version " + Main.VERSION;
         presence.state = "ReimoundBD Main Menu";
-        presence.largeImageKey = "logo_with_name";
+        presence.largeImageKey = "consejo";
         presence.largeImageText = "ReimoundBD Client";
 
         rpc.Discord_UpdatePresence(presence);
