@@ -21,7 +21,7 @@ public class CustomChat extends Modules {
     public CustomChat() {
         super("CustomChat", ModuleCategory.CHAT, "Allows you to customise the chat");
         customFont = new BooleanValue("CustomFont", true, "Makes chat render with a custom font");
-        background = new BooleanValue("Background", false, "Renders the background behind chat");
+        background = new BooleanValue("Background", true, "Renders the background behind chat");
 
         this.addValue(customFont, background);
     }

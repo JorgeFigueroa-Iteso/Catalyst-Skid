@@ -3,6 +3,7 @@ package com.krazzzzymonkey.catalyst.module.modules.chat;
 import com.krazzzzymonkey.catalyst.events.ClientTickEvent;
 import com.krazzzzymonkey.catalyst.module.ModuleCategory;
 import com.krazzzzymonkey.catalyst.module.Modules;
+import com.krazzzzymonkey.catalyst.utils.ChatColor;
 import com.krazzzzymonkey.catalyst.utils.visual.ChatUtils;
 import com.krazzzzymonkey.catalyst.value.types.BooleanValue;
 import dev.tigr.simpleevents.listener.EventHandler;
@@ -45,9 +46,9 @@ public class VisualRange extends Modules {
                     if (!knownPlayers.contains(e)) {
                         knownPlayers.add(e);
                         if (clientSide.getValue()) {
-                            ChatUtils.message(e.getName() + " Entered Render Distance.");
+                            ChatUtils.message(ChatColor.DARK_RED + e.getName() + ChatColor.GRAY + " Entered Render Distance.");
                         } else {
-                            Minecraft.getMinecraft().player.sendChatMessage(e.getName() + " Entered My Render Distance.");
+                            Minecraft.getMinecraft().player.sendChatMessage(ChatColor.DARK_RED + e.getName() + ChatColor.GRAY + " Entered My Render Distance.");
                         }
                     }
                 }
