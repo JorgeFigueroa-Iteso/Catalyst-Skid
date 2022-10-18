@@ -21,7 +21,7 @@ public class Prefix extends Command {
         CommandManager.prefix =  args[0];
         FileManager.savePrefix();
 
-        ChatUtils.normalMessage("Set Reimound prefix to: " + ChatColor.AQUA + CommandManager.prefix);
+        ChatUtils.normalMessage("Set ReimoundBD prefix to: " + ChatColor.AQUA + CommandManager.prefix);
 
     }
 

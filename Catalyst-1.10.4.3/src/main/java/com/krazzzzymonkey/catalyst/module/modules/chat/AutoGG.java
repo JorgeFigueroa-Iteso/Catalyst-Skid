@@ -140,7 +140,7 @@ public class AutoGG extends Modules {
         if (AutoGGManager.messages.size() > 0)
             message = AutoGGManager.messages.get(index);
         else
-            message = "GG {name}, Reimound is on top!";
+            message = "GG {name}, ReimoundBD is on top!";
 
         String messageSanitized = message.replace("{name}", name);
         if (messageSanitized.length() > 255) {

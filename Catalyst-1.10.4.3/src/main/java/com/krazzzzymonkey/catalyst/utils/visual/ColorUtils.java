@@ -16,7 +16,6 @@ public class ColorUtils {
     }
 
     public static Color rainbow() {
-        // long offset = 999999999999L;
         long offset = 999999999999L;
         float fade = 1.0f;
         float hue = (float) (System.nanoTime() + offset) / 1.0E10f % 1.0f;

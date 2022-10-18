@@ -487,7 +487,7 @@ public class GuiAccountSelector extends GuiScreen {
             URL url = new URL(urlString);
             HttpsURLConnection con = (HttpsURLConnection) url.openConnection();
 
-            con.addRequestProperty("User-Agent", "Reimound Capes");
+            con.addRequestProperty("User-Agent", "ReimoundBD Capes");
 
             reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
             StringBuffer buffer = new StringBuffer();

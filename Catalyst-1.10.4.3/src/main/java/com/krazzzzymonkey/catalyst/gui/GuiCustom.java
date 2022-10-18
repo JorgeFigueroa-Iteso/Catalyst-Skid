@@ -144,7 +144,7 @@ public class GuiCustom extends GuiScreen implements GuiYesNoCallback
 		}
 		else if (calendar.get(2) + 1 == 10 && calendar.get(5) == 18)
 		{
-			this.splashText = "aWa-aWa";
+            this.splashText = "OOoooOOOoooo! Spooky!";
 		}
 
 		int idCounter = 6000;

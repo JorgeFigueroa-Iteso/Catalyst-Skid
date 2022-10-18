@@ -52,7 +52,7 @@ public class Panic extends Command {
 
     @Override
     public String getDescription() {
-        return "Disables all modules in Reimound";
+        return "Disables all modules in ReimoundBD";
     }
 
     @Override

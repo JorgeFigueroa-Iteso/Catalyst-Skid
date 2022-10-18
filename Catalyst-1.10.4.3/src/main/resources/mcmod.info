@@ -1,7 +1,7 @@
 [
 {
-  "modid": "reimound",
-  "name": "Reimound",
+  "modid": "reimoundbd",
+  "name": "ReimoundBD",
   "description": "A Forge Utility Client specifically designed for the anarchy environment. ",
   "version": "${version}",
   "mcversion": "${mcversion}",

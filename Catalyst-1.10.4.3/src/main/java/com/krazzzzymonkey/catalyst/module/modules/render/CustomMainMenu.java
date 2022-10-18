@@ -27,7 +27,7 @@ public class CustomMainMenu extends Modules {
     public static final File SHADER_DIR = new File(String.format("%s%s%s%s%s", Minecraft.getMinecraft().gameDir, File.separator, Main.NAME, File.separator, "Shader"));
 
     public CustomMainMenu() {
-        super("CustomMainMenu", ModuleCategory.RENDER, "Toggles Reimound Main Menu");
+        super("CustomMainMenu", ModuleCategory.RENDER, "Toggles ReimoundBD Main Menu");
 
         if(!SHADER_DIR.exists()){
             SHADER_DIR.mkdirs();

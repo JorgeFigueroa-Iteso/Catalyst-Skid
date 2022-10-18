@@ -725,7 +725,7 @@ public class FileManager {
             loadFont();
         }
         if (!AUTOGGMESSAGES.exists()) {
-            AutoGGManager.messages.add("GG {name}! Reimound ontop.");
+            AutoGGManager.messages.add("GG {name}! ReimoundBD ontop.");
             saveMessages();
         } else {
             loadMessages();
