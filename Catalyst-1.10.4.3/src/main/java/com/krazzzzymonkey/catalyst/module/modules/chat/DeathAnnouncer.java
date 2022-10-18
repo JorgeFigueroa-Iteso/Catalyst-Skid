@@ -30,7 +30,7 @@ public class DeathAnnouncer extends Modules {
         if (Minecraft.getMinecraft().player == null) return;
         if (event.getEntity() instanceof EntityPlayer) {
             if (clientSide.getValue()) {
-                ChatUtils.message(event.getEntity().getName() + " just died in your render distance!");
+                ChatUtils.message(ChatColor.DARK_AQUA + event.getEntity().getName() + ChatColor.GRAY + " just died in your render distance!");
             } else {
                 Minecraft.getMinecraft().player.sendChatMessage(ChatColor.DARK_AQUA + event.getEntity().getName() + ChatColor.GRAY + " just died in my render distance!");
             }
