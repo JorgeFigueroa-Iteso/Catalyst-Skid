@@ -18,7 +18,7 @@ public class Help extends Command {
                 .replace("[", ChatColor.GRAY + "[" + ChatColor.GREEN).replace("]", "\2477]"));
             ChatUtils.normalChat(ChatColor.GRAY + " ➥ " + cmd.getDescription());
         }
-        ChatUtils.normalChat(ChatColor.GREEN + "========================================");
+        ChatUtils.normalChat(ChatColor.GREEN + "<======================================>");
         ChatUtils.normalChat(" ");
     }
 

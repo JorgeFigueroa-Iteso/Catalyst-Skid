@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 //TODO USER CUSTOM BACKGROUND
 public class CustomMainMenu extends Modules {
 
-    public static ModeValue mode = new ModeValue("Mode", new Mode("Image", true), new Mode("Shader", false));
+    public static ModeValue mode = new ModeValue("Mode", new Mode("Image", false), new Mode("Shader", true));
     public static BooleanValue logo = new BooleanValue("CustomLogo", true, "Replaces the Minecraft Logo with a custom Logo");
     public static ModeValue shader;
 

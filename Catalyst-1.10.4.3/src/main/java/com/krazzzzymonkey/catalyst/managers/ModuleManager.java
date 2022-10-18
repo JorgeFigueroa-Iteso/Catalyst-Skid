@@ -50,7 +50,7 @@ public class ModuleManager {
         addModule(new PopChams());
         addModule(new BossStack());
         addModule(new Profile());
-        //addModule(new XRay());
+        addModule(new XRay());
         addModule(new SkeletonESP());
         addModule(new Anchor());
         addModule(new LiquidInteract());

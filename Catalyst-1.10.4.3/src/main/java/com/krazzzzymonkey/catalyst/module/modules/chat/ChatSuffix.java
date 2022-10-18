@@ -23,7 +23,7 @@ public class ChatSuffix extends Modules {
 
     public ChatSuffix() {
         super("ChatSuffix", ModuleCategory.CHAT, "Adds client name at the end of a chat message");
-        this.addChars = new BooleanValue("AddChars", false, "Adds random unicode chars to the suffix");
+        this.addChars = new BooleanValue("AddChars", true, "Adds random unicode chars to the suffix");
         this.blueText = new BooleanValue("BlueName", false, "Adds \"`\" to the beginning of the suffix making it blue on some severs");
         this.addValue(addChars, blueText);
     }
@@ -38,19 +38,15 @@ public class ChatSuffix extends Modules {
                 if (!cPacketChatMessage.getMessage().startsWith("/")) {
                     String concat;
                     if (addChars.getValue()) {
-                        // concat = cPacketChatMessage.getMessage().concat("   " + decoChar + " \u1d04\u1d00\u1d1b\u1d00\u029f\u028f\ua731\u1d1b " + decoChar);
-                        concat = cPacketChatMessage.getMessage().concat("   " + decoChar + " \u0280\u1D07\u026A\u1D0D\u1D0F\u1D1C\u0274\u1D05 " + decoChar);
+                        concat = cPacketChatMessage.getMessage().concat("   " + decoChar + " \u1d04\u1d00\u1d1b\u1d00\u029f\u028f\ua731\u1d1b " + decoChar);
                     } else {
-                        // concat = cPacketChatMessage.getMessage().concat(" \u1d04\u1d00\u1d1b\u1d00\u029f\u028f\ua731\u1d1b ");
-                        concat = cPacketChatMessage.getMessage().concat(" \u0280\u1D07\u026A\u1D0D\u1D0F\u1D1C\u0274\u1D05 ");
+                        concat = cPacketChatMessage.getMessage().concat(" \u1d04\u1d00\u1d1b\u1d00\u029f\u028f\ua731\u1d1b ");
                     }
                     if (blueText.getValue()) {
                         if (addChars.getValue()) {
-                            // concat = cPacketChatMessage.getMessage().concat("   `" + decoChar + " \u1d04\u1d00\u1d1b\u1d00\u029f\u028f\ua731\u1d1b " + decoChar);
-                            concat = cPacketChatMessage.getMessage().concat("   `" + decoChar + " \u0280\u1D07\u026A\u1D0D\u1D0F\u1D1C\u0274\u1D05 " + decoChar);
+                            concat = cPacketChatMessage.getMessage().concat("   `" + decoChar + " \u1d04\u1d00\u1d1b\u1d00\u029f\u028f\ua731\u1d1b " + decoChar);
                         } else {
-                            // concat = cPacketChatMessage.getMessage().concat("` \u1d04\u1d00\u1d1b\u1d00\u029f\u028f\ua731\u1d1b ");
-                            concat = cPacketChatMessage.getMessage().concat("` \u0280\u1D07\u026A\u1D0D\u1D0F\u1D1C\u0274\u1D05 ");
+                            concat = cPacketChatMessage.getMessage().concat("` \u1d04\u1d00\u1d1b\u1d00\u029f\u028f\ua731\u1d1b ");
                         }
                     }
                     cPacketChatMessage.message = concat;
