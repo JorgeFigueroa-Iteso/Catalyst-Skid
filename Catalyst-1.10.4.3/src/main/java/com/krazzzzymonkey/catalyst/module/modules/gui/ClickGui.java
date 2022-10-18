@@ -84,15 +84,15 @@ public class ClickGui extends Modules {
         this.setKey(Keyboard.KEY_RCONTROL);
         tooltip = new BooleanValue("Tooltip", true, "Shows these tooltips you are reading right now");
         shadow = new BooleanValue("Shadow", true, "Darkens the background of the click gui");
-        blur = new BooleanValue("Blur", false   , "Blurs the background of the click gui");
+        blur = new BooleanValue("Blur", true   , "Blurs the background of the click gui");
         clickGuiColor = new ColorValue("HeaderColor", Color.CYAN, "Changes the header color of the click gui");
         clickGuiBackGroundColor = new ColorValue("BackgroundColor", Color.BLACK, "Changes the background color of the click gui");
         clickGuiToggledColor = new ColorValue("ToggledColor", Color.CYAN, "Changes the color of all toggled modules in the click gui");
-        rainbow = new BooleanValue("Rainbow", false, "Makes the whole click gui cycle through colors");
+        rainbow = new BooleanValue("Rainbow", true, "Makes the whole click gui cycle through colors");
         rainbowMode = new ModeValue("RainbowMode", new Mode("RainbowFlow", true), new Mode("Static", false));
-        rainbowSpeed = new IntegerValue("RainbowSpeed", 50, 0, 100, "The speed at which the rainbow flow is");
+        rainbowSpeed = new IntegerValue("RainbowSpeed", 25, 0, 100, "The speed at which the rainbow flow is");
         rainbowHue = new DoubleValue("RainbowHue", 0.1, 0.1D, 1, "The difference of color between each module when in rainbow flow");
-        clickGuiScale = new Number("Scale", 1.0);
+        clickGuiScale = new Number("Scale", 0.95);
 
         this.addValue(clickGuiScale, tooltip, shadow, blur, clickGuiColor, clickGuiBackGroundColor, clickGuiToggledColor, rainbow, rainbowMode, rainbowSpeed, rainbowHue);
         setColor();
