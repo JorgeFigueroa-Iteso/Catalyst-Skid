@@ -7,7 +7,7 @@ import com.krazzzzymonkey.catalyst.utils.system.Wrapper;
 public class DarkTheme extends Theme {
 
     public DarkTheme() {
-        super("CatalystDark");
+        super("ReimoundDark");
         this.fontRenderer = Wrapper.INSTANCE.fontRenderer();
         addRenderer(ComponentType.FRAME, new DarkFrame(this));
         addRenderer(ComponentType.BUTTON, new DarkButton(this));
