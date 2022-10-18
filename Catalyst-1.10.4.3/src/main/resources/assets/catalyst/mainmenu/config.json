@@ -12,8 +12,8 @@
       "image": "mainmenu/logo.png",
       "posX": 75,
       "posY": 0,
-      "width": 200,
-      "height": 96,
+      "width": 0,
+      "height": 0,
       "alignment": "top_left"
     }
   },
@@ -30,6 +30,7 @@
       imageWidth: 100,
       imageHeight: 50,
       "alignment": "left_center",
+      "hoverText": "No hoe's?",
       "action": {
         "type": "openGui",
         "gui": "singleplayer"
@@ -47,6 +48,7 @@
       imageWidth: 100,
       imageHeight: 50,
       "alignment": "left_center",
+      "hoverText": "Let's get some fun",
       "action": {
         "type": "openGui",
         "gui": "multiplayer"
