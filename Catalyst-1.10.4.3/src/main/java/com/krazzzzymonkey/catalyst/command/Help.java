@@ -12,13 +12,13 @@ public class Help extends Command {
     @Override
     public void runCommand(String s, String[] args) {
         ChatUtils.normalChat(" ");
-        ChatUtils.normalChat(ChatColor.GREEN + "==============" + ChatColor.WHITE + "CATALYST" + ChatColor.GREEN + "==============");
+        ChatUtils.normalChat(ChatColor.GREEN + "<==============" + ChatColor.WHITE + " REIMOUND " + ChatColor.GREEN + "==============>");
         for (Command cmd : CommandManager.getInstance().getCommands()) {
             ChatUtils.normalChat(cmd.getSyntax().replace("<", ChatColor.GRAY + "<" + ChatColor.GREEN).replace(">", "\2477>")
                 .replace("[", ChatColor.GRAY + "[" + ChatColor.GREEN).replace("]", "\2477]"));
             ChatUtils.normalChat(ChatColor.GRAY + " ➥ " + cmd.getDescription());
         }
-        ChatUtils.normalChat(ChatColor.GREEN + "====================================");
+        ChatUtils.normalChat(ChatColor.GREEN + "========================================");
         ChatUtils.normalChat(" ");
     }
 

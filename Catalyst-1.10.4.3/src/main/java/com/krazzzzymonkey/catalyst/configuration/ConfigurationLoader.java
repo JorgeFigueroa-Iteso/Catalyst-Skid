@@ -25,7 +25,7 @@ public class ConfigurationLoader {
     public void load() throws Exception {
         JsonParser jsonParser = new JsonParser();
 
-        File configFolder = CATALYST_DIR.resolve("CatalystMainMenu").toFile();
+        File configFolder = CATALYST_DIR.resolve("ReimoundMainMenu").toFile();
         if (!configFolder.exists()) {
             configFolder.mkdir();
         }

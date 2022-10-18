@@ -52,7 +52,7 @@ public class Panic extends Command {
 
     @Override
     public String getDescription() {
-        return "Disables all modules in Catalyst";
+        return "Disables all modules in Reimound";
     }
 
     @Override

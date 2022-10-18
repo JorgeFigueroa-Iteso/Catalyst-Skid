@@ -1,5 +1,6 @@
 package com.krazzzzymonkey.catalyst.mixin.client;
 
+import com.krazzzzymonkey.catalyst.Main;
 import com.krazzzzymonkey.catalyst.managers.ChatMentionManager;
 import com.krazzzzymonkey.catalyst.managers.ModuleManager;
 import com.krazzzzymonkey.catalyst.module.modules.chat.ChatMention;
@@ -119,7 +120,7 @@ public abstract class MixinGuiNewChat extends Gui {
                                 }
                                 GlStateManager.enableBlend();
 
-                                if (s.startsWith("\u00a78[" + "\u00A7r" + "Catalyst" + "\u00a78]\u00a77")) {
+                                if (s.startsWith("\u00a78[" + "\u00A7r" + Main.NAME + "\u00a78]\u00a77")) {
                                     if (ModuleManager.getModule("CustomChat").isToggledValue("CustomFont") && ModuleManager.getModule("CustomChat").isToggled()) {
                                         CustomChat.fontRenderer.drawStringWithShadow(s, (double) 0.0, (double) (j2 - 8), (int) (rainbow.getRGB() + (l1 << 24)));
                                     } else

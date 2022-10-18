@@ -19,9 +19,9 @@ public class CatalystRPC {
         rpc.Discord_Initialize(ClientId, handlers, true, "");
         presence.startTimestamp = System.currentTimeMillis() / 1000L;
         presence.details = "Version " + Main.VERSION;
-        presence.state = "Reimound Main Menu";
+        presence.state = "Catalyst Main Menu";
         presence.largeImageKey = "logo_with_name";
-        presence.largeImageText = "Reimound Client";
+        presence.largeImageText = "Catalyst Client";
 
         rpc.Discord_UpdatePresence(presence);
         new Thread(() -> {

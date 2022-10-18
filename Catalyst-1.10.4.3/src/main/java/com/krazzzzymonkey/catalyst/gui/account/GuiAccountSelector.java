@@ -134,7 +134,7 @@ public class GuiAccountSelector extends GuiScreen {
     @Override
     public void drawScreen(int par1, int par2, float par3) {
         accountsgui.drawScreen(par1, par2, par3);
-        Main.fontRenderer.drawCenteredString("Catalyst Account Manager", this.width / 2, 4, -1);
+        Main.fontRenderer.drawCenteredString("Reimound Account Manager", this.width / 2, 4, -1);
         if (loginfailed != null) {
             Main.fontRenderer.drawCenteredString(loginfailed.getLocalizedMessage(), this.width / 2, this.height - 62, 16737380);
         }
@@ -455,7 +455,7 @@ public class GuiAccountSelector extends GuiScreen {
                             e.printStackTrace();
                         }
                     } else {
-                        Minecraft.getMinecraft().renderEngine.bindTexture( Minecraft.getMinecraft().getRenderManager().renderEngine.getDynamicTextureLocation("catalyst/avatars", new DynamicTexture(avatar.get(data.alias))));
+                        Minecraft.getMinecraft().renderEngine.bindTexture( Minecraft.getMinecraft().getRenderManager().renderEngine.getDynamicTextureLocation("reimound/avatars", new DynamicTexture(avatar.get(data.alias))));
                     }
                 }
 
@@ -487,7 +487,7 @@ public class GuiAccountSelector extends GuiScreen {
             URL url = new URL(urlString);
             HttpsURLConnection con = (HttpsURLConnection) url.openConnection();
 
-            con.addRequestProperty("User-Agent", "Catalyst Capes");
+            con.addRequestProperty("User-Agent", "Reimound Capes");
 
             reader = new BufferedReader(new InputStreamReader(con.getInputStream()));
             StringBuffer buffer = new StringBuffer();
