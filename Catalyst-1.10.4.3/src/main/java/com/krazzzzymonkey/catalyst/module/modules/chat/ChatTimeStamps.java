@@ -22,8 +22,8 @@ public class ChatTimeStamps extends Modules {
 
     public ChatTimeStamps() {
         super("ChatTimeStamps", ModuleCategory.CHAT, "Adds timestamps to messages that were sent in chat");
-        this.bracketColor = new ModeValue("BracketColor", new Mode("Dark Red", true), new Mode("Red", false), new Mode("Gold", false), new Mode("Yellow", false), new Mode("Dark Green", false), new Mode("Green", false), new Mode("Aqua", false), new Mode("Dark Aqua", false), new Mode("Dark Blue", false), new Mode("Blue", false), new Mode("Light Purple", false), new Mode("Dark Purple", false), new Mode("Dark Gray", false), new Mode("Gray", false), new Mode("Black", false));
-        this.timeColor = new ModeValue("TimeColor", new Mode("Dark Red", true), new Mode("Red", false), new Mode("Gold", false), new Mode("Yellow", false), new Mode("Dark Green", false), new Mode("Green", false), new Mode("Aqua", false), new Mode("Dark Aqua", false), new Mode("Dark Blue", false), new Mode("Blue", false), new Mode("Light Purple", false), new Mode("Dark Purple", false), new Mode("Dark Gray", false), new Mode("Gray", false), new Mode("Black", false));
+        this.bracketColor = new ModeValue("BracketColor", new Mode("Dark Red", false), new Mode("Red", false), new Mode("Gold", false), new Mode("Yellow", false), new Mode("Dark Green", false), new Mode("Green", false), new Mode("Aqua", false), new Mode("Dark Aqua", false), new Mode("Dark Blue", false), new Mode("Blue", false), new Mode("Light Purple", false), new Mode("Dark Purple", false), new Mode("Dark Gray", true), new Mode("Gray", false), new Mode("Black", false));
+        this.timeColor = new ModeValue("TimeColor", new Mode("Dark Red", false), new Mode("Red", false), new Mode("Gold", false), new Mode("Yellow", false), new Mode("Dark Green", false), new Mode("Green", false), new Mode("Aqua", false), new Mode("Dark Aqua", false), new Mode("Dark Blue", false), new Mode("Blue", false), new Mode("Light Purple", false), new Mode("Dark Purple", false), new Mode("Dark Gray", false), new Mode("Gray", true), new Mode("Black", false));
         this.addValue(bracketColor, timeColor);
     }
 
@@ -129,7 +129,7 @@ public class ChatTimeStamps extends Modules {
         Date date = new Date();
         SimpleDateFormat dateFormatter = new SimpleDateFormat("HH:mm");
         String strDate = dateFormatter.format(date);
-        TextComponentString time = new TextComponentString(bracketFormatting + "<" + timeFormatting + strDate + bracketFormatting + ">" + ChatFormatting.RESET);
+        TextComponentString time = new TextComponentString(bracketFormatting + "[" + timeFormatting + strDate + bracketFormatting + "] " + ChatFormatting.RESET);
         event.setMessage(time.appendSibling(event.getMessage()));
     }
 }
