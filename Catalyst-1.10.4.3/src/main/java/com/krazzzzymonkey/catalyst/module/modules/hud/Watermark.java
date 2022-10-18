@@ -62,9 +62,9 @@ public class Watermark extends Modules {
         }
         int x = xOffset.getValue().intValue();
         int y = yOffset.getValue().intValue();
-        String str = Minecraft.getMinecraft().player.getName() + " v0.1b";
+        String str = Minecraft.getMinecraft().player.getName() + " " + Main.VERSION;
         if (!clientName.getValue()) {
-            str = Main.NAME + " v0.1b";
+            str = Main.NAME + " " + Main.VERSION;
         }
         if (smiley.getValue()) {
             str = str.concat(" :^)");

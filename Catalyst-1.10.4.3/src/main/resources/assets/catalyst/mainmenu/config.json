@@ -145,7 +145,7 @@
       "text": "Forge #forgeversion# for Minecraft #mcversion# - Copyright Mojang AB. Do not distribute!",
       "posX": 2,
       "posY": 10,
-      "color": -1,
+
       "alignment": "bottom_left"
     },
     "packTxt": {

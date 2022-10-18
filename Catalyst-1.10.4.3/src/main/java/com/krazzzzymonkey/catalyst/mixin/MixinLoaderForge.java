@@ -21,7 +21,7 @@ public class MixinLoaderForge implements IFMLLoadingPlugin {
             e.printStackTrace();
         }
 
-        Main.logger.info("Catalyst Mixins Loaded!");
+        Main.logger.info("ReimoundBD Mixins Loaded!");
         MixinBootstrap.init();
         Mixins.addConfiguration("mixins.catalyst.json");
         MixinEnvironment.getDefaultEnvironment().setObfuscationContext("searge");

@@ -6,7 +6,7 @@ import club.minnced.discord.rpc.DiscordRichPresence;
 import net.minecraft.client.Minecraft;
 
 public class CatalystRPC {
-    private static final String ClientId = "714569481409527838";
+    private static final String ClientId = "900473855485833216";
     private static final Minecraft mc = Minecraft.getMinecraft();
     private static final DiscordRPC rpc = DiscordRPC.INSTANCE;
     public static DiscordRichPresence presence = new DiscordRichPresence();
@@ -19,9 +19,9 @@ public class CatalystRPC {
         rpc.Discord_Initialize(ClientId, handlers, true, "");
         presence.startTimestamp = System.currentTimeMillis() / 1000L;
         presence.details = "Version " + Main.VERSION;
-        presence.state = "Catalyst Main Menu";
+        presence.state = "ReimoundBD Main Menu";
         presence.largeImageKey = "logo_with_name";
-        presence.largeImageText = "Catalyst Client";
+        presence.largeImageText = "ReimoundBD Client";
 
         rpc.Discord_UpdatePresence(presence);
         new Thread(() -> {
