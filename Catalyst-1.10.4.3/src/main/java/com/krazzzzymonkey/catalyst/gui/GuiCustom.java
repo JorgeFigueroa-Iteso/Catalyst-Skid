@@ -122,9 +122,9 @@ public class GuiCustom extends GuiScreen implements GuiYesNoCallback
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(new Date());
 
-		if (calendar.get(2) + 1 == 11 && calendar.get(5) == 9)
+		if (calendar.get(2) + 1 == 12 && calendar.get(5) == 2)
 		{
-			this.splashText = "Happy birthday, ez!";
+			this.splashText = "Happy birthday, Reimound!";
 		}
 		else if (calendar.get(2) + 1 == 6 && calendar.get(5) == 1)
 		{
@@ -141,6 +141,10 @@ public class GuiCustom extends GuiScreen implements GuiYesNoCallback
 		else if (calendar.get(2) + 1 == 10 && calendar.get(5) == 31)
 		{
 			this.splashText = "OOoooOOOoooo! Spooky!";
+		}
+		else if (calendar.get(2) + 1 == 10 && calendar.get(5) == 18)
+		{
+			this.splashText = "aWa-aWa";
 		}
 
 		int idCounter = 6000;

@@ -33,7 +33,7 @@ public class FileManager {
 
     public static final Path CATALYST_DIR = Wrapper.INSTANCE.mc().gameDir.toPath().resolve(Main.NAME);
     public static final Path ASSET_DIR = CATALYST_DIR.resolve("Assets");
-    public static final Path ALT_DIR = CATALYST_DIR.resolve("Catalyst Account Manager");
+    public static final Path ALT_DIR = CATALYST_DIR.resolve("Reimound Account Manager");
     public static final Path PROFILES_DIR = CATALYST_DIR.resolve("Profiles");
     private static final File HACKS = PROFILES_DIR.resolve("default.json").toFile();
     public static final File CLICKGUI = CATALYST_DIR.resolve("clickgui.json").toFile();
@@ -725,7 +725,7 @@ public class FileManager {
             loadFont();
         }
         if (!AUTOGGMESSAGES.exists()) {
-            AutoGGManager.messages.add("GG {name}! Catalyst ontop.");
+            AutoGGManager.messages.add("GG {name}! Reimound ontop.");
             saveMessages();
         } else {
             loadMessages();

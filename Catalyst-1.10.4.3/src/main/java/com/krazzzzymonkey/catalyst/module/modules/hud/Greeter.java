@@ -36,7 +36,7 @@ public class Greeter extends Modules {
     public Greeter() {
         super("Greeter", ModuleCategory.HUD, "Displays greeter on hud", true);
 
-        this.clientName = new BooleanValue("ClientName", true, "Shows name of Catalyst Client");
+        this.clientName = new BooleanValue("ClientName", true, "Shows name of Reimound Client");
         this.smiley = new BooleanValue("SmileyFace", false, "Adds a smiley face to the end :^)");
         this.colorValue = new ColorValue("Color", Color.CYAN, "The color of the greeter");
         this.rainbow = new BooleanValue("Rainbow", false, "Makes the greeter cycle through colors");
@@ -75,7 +75,7 @@ public class Greeter extends Modules {
         }
         int x = xOffset.getValue().intValue();
         int y = yOffset.getValue().intValue();
-        String str = "Good " + time + Minecraft.getMinecraft().player.getName() + ", Welcome to Catalyst!";
+        String str = "Good " + time + Minecraft.getMinecraft().player.getName() + ", Welcome to " + Main.NAME + "!";
         if (!clientName.getValue()) {
             str = "Good " + time + Minecraft.getMinecraft().player.getName() + "!";
         }

@@ -39,13 +39,13 @@ public class ActiveModules extends Modules {
     public ActiveModules() {
         super("ActiveModules", ModuleCategory.HUD, "Displays active modules on hud", true);
         this.colorValue = new ColorValue("Color", Color.CYAN, "Changes Color of the active modules");
-        this.rainbow = new BooleanValue("Rainbow", false, "Makes the active modules cycle through colors ");
+        this.rainbow = new BooleanValue("Rainbow", true, "Makes the active modules cycle through colors ");
         this.rainbowSpeed = new IntegerValue("RainbowSpeed", 100, 0, 100, "The speed at which the rainbow is");
         this.hueOffset = new DoubleValue("HueOffset", 0.999, 0.1D, 1D, "The difference of color between each module when in active modules");
 
         this.xOffset = new Number("X Offset", 0.0);
         this.yOffset = new Number("y Offset", 15.0);
-        this.toggleModules = new BooleanValue("ToggleModule", true, "Displays when a module is toggled in the bottom right of the screen");
+        this.toggleModules = new BooleanValue("ToggleModule", false, "Displays when a module is toggled in the bottom right of the screen");
 
         this.addValue(hueOffset, rainbowSpeed, colorValue, rainbow, toggleModules, xOffset, yOffset);
     }

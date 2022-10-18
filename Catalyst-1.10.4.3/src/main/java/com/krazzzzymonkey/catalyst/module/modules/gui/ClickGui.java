@@ -90,9 +90,9 @@ public class ClickGui extends Modules {
         clickGuiToggledColor = new ColorValue("ToggledColor", Color.CYAN, "Changes the color of all toggled modules in the click gui");
         rainbow = new BooleanValue("Rainbow", true, "Makes the whole click gui cycle through colors");
         rainbowMode = new ModeValue("RainbowMode", new Mode("RainbowFlow", true), new Mode("Static", false));
-        rainbowSpeed = new IntegerValue("RainbowSpeed", 25, 0, 100, "The speed at which the rainbow flow is");
+        rainbowSpeed = new IntegerValue("RainbowSpeed", 25, 0, 150, "The speed at which the rainbow flow is");
         rainbowHue = new DoubleValue("RainbowHue", 0.1, 0.1D, 1, "The difference of color between each module when in rainbow flow");
-        clickGuiScale = new Number("Scale", 0.95);
+        clickGuiScale = new Number("Scale", 0.97);
 
         this.addValue(clickGuiScale, tooltip, shadow, blur, clickGuiColor, clickGuiBackGroundColor, clickGuiToggledColor, rainbow, rainbowMode, rainbowSpeed, rainbowHue);
         setColor();
