@@ -134,7 +134,7 @@ public class ModuleManager {
         addModule(new ElytraFly());
         addModule(new BowRelease());
         addModule(new ActiveModules());
-        addModule(new Watermark());
+        //addModule(new Watermark());
         addModule(new CustomFOV());
         addModule(new ChatMention());
         addModule(new LowOffHand());

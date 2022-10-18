@@ -16,9 +16,9 @@ import java.awt.*;
 
 public class Crosshair extends Modules {
 
-    ColorValue color = new ColorValue("Color", Color.CYAN, "The color of the crosshair");
+    ColorValue color = new ColorValue("Color", Color.WHITE, "The color of the crosshair");
     BooleanValue colorRainbow = new BooleanValue("Rainbow", false, "Makes the crosshair cycle through colors");
-    DoubleValue crosshairGap = new DoubleValue("CrosshairGap", 2, 0, 20, "The gap in the middle of the crosshair");
+    DoubleValue crosshairGap = new DoubleValue("CrosshairGap", 0, 0, 20, "The gap in the middle of the crosshair");
     DoubleValue crosshairWidth = new DoubleValue("CrosshairWidth", 1, 0.1, 5, "The width of the crosshair");
     DoubleValue crosshairSize = new DoubleValue("CrosshairSize", 3, 1, 50, "The size of the crosshair");
 
