@@ -98,7 +98,7 @@ public class AutoCrystalRewrite extends Modules {
     final BooleanValue antiWeakness = new BooleanValue("AntiWeakness", true, "Uses a sword when attacking crystals if you have the weakness effect");
     final BooleanValue ignoreBlocks = new BooleanValue("IgnoreBlocks", true, "Ignores the blocks around the crystal when calculating damage");
 
-    final ModeValue renderMode = new ModeValue("RenderMode", new Mode("Full", true), new Mode("Outline", true));
+    final ModeValue renderMode = new ModeValue("RenderMode", new Mode("Full", false), new Mode("Outline", true));
     final ColorValue espColor = new ColorValue("EspColor", Color.CYAN.getRGB(), "The color of the box showing you where a crystal is going to be placed");
     final BooleanValue rainbow = new BooleanValue("EspRainbow", false, "Makes the esp box cycle through colors");
     final IntegerValue espHeight = new IntegerValue("EspHeight", 1, 0, 2, "The height of the esp box");
