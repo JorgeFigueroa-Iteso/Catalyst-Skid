@@ -65,11 +65,11 @@ public class AutoCrystalRewrite extends Modules {
     final BooleanValue thirteen = new BooleanValue("1.13+Place", false, "Allows the client to use 1x1 blocks as valid crystal placements");
     final BooleanValue place = new BooleanValue("Place", true, "Makes the auto crystal place crystals");
     final BooleanValue hit = new BooleanValue("Hit", true, "Makes the auto crystal break crystals");
-    final DoubleValue hitRange = new DoubleValue("HitRange", 5.0, 0.0, 6.0, "The max range at which the client will hit crystals");
-    final DoubleValue hitWallRange = new DoubleValue("HitWallRange", 3.5, 0.0, 6.0, "The max range at which the client will hit crystals through walls");
-    final DoubleValue placeRange = new DoubleValue("PlaceRange", 5.0, 0.0, 6.0, "The max range at which the client will hit crystals");
-    final DoubleValue placeWallRange = new DoubleValue("PlaceWallRange", 3.5, 0.0, 6.0, "The max range at which the client will place crystals");
-    final DoubleValue targetRange = new DoubleValue("TargetRange", 15.0, 0.0, 20.0, "The max range at which the client will target players");
+    final DoubleValue hitRange = new DoubleValue("HitRange", 6.0, 0.0, 6.0, "The max range at which the client will hit crystals");
+    final DoubleValue hitWallRange = new DoubleValue("HitWallRange", 2.8, 0.0, 6.0, "The max range at which the client will hit crystals through walls");
+    final DoubleValue placeRange = new DoubleValue("PlaceRange", 5.5, 0.0, 6.0, "The max range at which the client will hit crystals");
+    final DoubleValue placeWallRange = new DoubleValue("PlaceWallRange", 5.3, 0.0, 6.0, "The max range at which the client will place crystals");
+    final DoubleValue targetRange = new DoubleValue("TargetRange", 6.2, 0.0, 20.0, "The max range at which the client will target players");
     final IntegerValue placeDelay = new IntegerValue("PlaceDelay", 0, 0, 10, "The delay between placing crystals");
     final IntegerValue hitDelay = new IntegerValue("HitDelay", 0, 0, 10, "The delay between breaking crystals");
     final IntegerValue targetHealthPlace = new IntegerValue("TargetHealthPlace", 10, 0, 36, "Will only place if the minimum damage the crystal will do to the target is greater than this");
@@ -98,7 +98,7 @@ public class AutoCrystalRewrite extends Modules {
     final BooleanValue antiWeakness = new BooleanValue("AntiWeakness", true, "Uses a sword when attacking crystals if you have the weakness effect");
     final BooleanValue ignoreBlocks = new BooleanValue("IgnoreBlocks", true, "Ignores the blocks around the crystal when calculating damage");
 
-    final ModeValue renderMode = new ModeValue("RenderMode", new Mode("Full", false), new Mode("Outline", true));
+    final ModeValue renderMode = new ModeValue("RenderMode", new Mode("Full", true), new Mode("Outline", true));
     final ColorValue espColor = new ColorValue("EspColor", Color.CYAN.getRGB(), "The color of the box showing you where a crystal is going to be placed");
     final BooleanValue rainbow = new BooleanValue("EspRainbow", false, "Makes the esp box cycle through colors");
     final IntegerValue espHeight = new IntegerValue("EspHeight", 1, 0, 2, "The height of the esp box");
