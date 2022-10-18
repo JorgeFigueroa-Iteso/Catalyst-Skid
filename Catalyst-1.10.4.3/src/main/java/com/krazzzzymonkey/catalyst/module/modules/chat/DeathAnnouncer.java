@@ -2,6 +2,7 @@ package com.krazzzzymonkey.catalyst.module.modules.chat;
 
 import com.krazzzzymonkey.catalyst.module.ModuleCategory;
 import com.krazzzzymonkey.catalyst.module.Modules;
+import com.krazzzzymonkey.catalyst.utils.ChatColor;
 import com.krazzzzymonkey.catalyst.utils.visual.ChatUtils;
 import com.krazzzzymonkey.catalyst.value.types.BooleanValue;
 import net.minecraft.client.Minecraft;
@@ -31,7 +32,7 @@ public class DeathAnnouncer extends Modules {
             if (clientSide.getValue()) {
                 ChatUtils.message(event.getEntity().getName() + " just died in your render distance!");
             } else {
-                Minecraft.getMinecraft().player.sendChatMessage(event.getEntity().getName() + " just died in my render distance!");
+                Minecraft.getMinecraft().player.sendChatMessage(ChatColor.DARK_AQUA + event.getEntity().getName() + ChatColor.GRAY + " just died in my render distance!");
             }
         }
     }

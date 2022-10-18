@@ -65,7 +65,7 @@ public class Announcer extends Modules {
         eatItem = new BooleanValue("ItemEat", true, "Announces when you eat food");
         throwItem = new BooleanValue("ItemThrow", true, "Announces when you throw an item out of your inventory");
         booleanSneak = new BooleanValue("Sneaking", true, "Announces when you sneak");
-        booleanGui = new BooleanValue("Click Gui", true, "Announces when you open the Catalyst ClickGui");
+        booleanGui = new BooleanValue("Click Gui", true, "Announces when you open the Reimound ClickGui");
         enchantItem = new BooleanValue("EnchantItem", true, "Announces when you enchant an item");
         jumping = new BooleanValue("Jumping", true, "Announces when you jump");
         // booleanGainHealth = new BooleanValue("GainHealth", true);
@@ -75,18 +75,18 @@ public class Announcer extends Modules {
     }
 
 
-    public static String walkMessage = "I just walked {blocks} blocks thanks to Catalyst!";
-    public static String throwMessage = "I just threw {amount} {name} thanks to Catalyst! ";
-    public static String placeMessage = "I just placed {amount} {name} thanks to Catalyst!";
-    public static String jumpMessage = "I just jumped thanks to Catalyst!";
-    public static String sneakMessage = "I started sneaking thanks to Catalyst!";
-    public static String unSneakMessage = "I stopped sneaking thanks to Catalyst!";
-    public static String breakMessage = "I just broke {amount} {name} thanks to Catalyst!";
-    public static String attackMessage = "I just attacked {name} with a {item} thanks to Catalyst!";
-    public static String eatMessage = "I just ate {amount} {name} thanks to Catalyst!";
-    public static String openGuiMessage = "I just opened Catalyst ClickGUI!";
-    public static String closeGuiMessage = "I just closed Catalyst ClickGUI!";
-    public static String enchantMessage = "I just enchanted an item thanks to Catalyst!";
+    public static String walkMessage = "I just walked {blocks} blocks thanks to Reimound!";
+    public static String throwMessage = "I just threw {amount} {name} thanks to Reimound! ";
+    public static String placeMessage = "I just placed {amount} {name} thanks to Reimound!";
+    public static String jumpMessage = "I just jumped thanks to Reimound!";
+    public static String sneakMessage = "I started sneaking thanks to Reimound!";
+    public static String unSneakMessage = "I stopped sneaking thanks to Reimound!";
+    public static String breakMessage = "I just broke {amount} {name} thanks to Reimound!";
+    public static String attackMessage = "I just attacked {name} with a {item} thanks to Reimound!";
+    public static String eatMessage = "I just ate {amount} {name} thanks to Reimound!";
+    public static String openGuiMessage = "I just opened Reimound ClickGUI!";
+    public static String closeGuiMessage = "I just closed Reimound ClickGUI!";
+    public static String enchantMessage = "I just enchanted an item thanks to Reimound!";
 
     int blocksPlaced = 0;
     int blocksBroken = 0;
