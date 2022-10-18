@@ -76,7 +76,7 @@ public class FakePlayer extends Modules {
             this.toggle();
             return;
         }
-        clonedPlayer = new EntityOtherPlayerMP(mc.world, new GameProfile(UUID.fromString("c83369bc-c217-439d-aabd-80a577899e97"), "Reimound"));
+        clonedPlayer = new EntityOtherPlayerMP(mc.world, new GameProfile(UUID.fromString("c83369bc-c217-439d-aabd-80a577899e97"), "ReimoundClient"));
         File file = FileManager.getAssetFile("fakeplayer" + File.separator + "skin.png");
 
         {
