@@ -9,11 +9,11 @@
       "alignment": "top_left"
     },
     "logo": {
-      "image": "mainmenu/logo.png",
-      "posX": 75,
+      "image": "mainmenu/reimound_logo.png",
+      "posX": 100,
       "posY": 0,
-      "width": 0,
-      "height": 0,
+      "width": 175,
+      "height": 96,
       "alignment": "top_left"
     }
   },
@@ -143,10 +143,9 @@
   "texts": {
     "mojang": {
       "text": "Forge #forgeversion# for Minecraft #mcversion# - Copyright Mojang AB. Do not distribute!",
-      "posX": 2,
-      "posY": 10,
-
-      "alignment": "bottom_left"
+      "posX": 100,
+      "posY": 120,
+      "alignment": "left_center"
     },
     "packTxt": {
       "text": "AAIII - 0.0.1a",
@@ -179,7 +178,7 @@
           "mainmenu/6.jpg"
         ],
         "displayDuration": 500,
-        "fadeDuration": 30,
+        "fadeDuration": 15,
         "shuffle": "true"
       }
     }
