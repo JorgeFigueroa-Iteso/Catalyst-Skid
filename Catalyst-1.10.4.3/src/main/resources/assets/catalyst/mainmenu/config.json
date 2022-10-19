@@ -10,10 +10,10 @@
     },
     "logo": {
       "image": "mainmenu/reimound_logo.png",
-      "posX": 100,
+      "posX": 92,
       "posY": 0,
-      "width": 175,
-      "height": 96,
+      "width": 170,
+      "height": 94,
       "alignment": "top_left"
     }
   },
