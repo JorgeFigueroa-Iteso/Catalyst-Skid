@@ -10,7 +10,7 @@
     },
     "logo": {
       "image": "mainmenu/reimound_logo.png",
-      "posX": 92,
+      "posX": 91,
       "posY": 0,
       "width": 170,
       "height": 94,
@@ -21,7 +21,7 @@
     "singleplayer": {
       "text": "Singleplayer",
       "normalTextColor": 12303291,
-      "hoverTextColor": 3125670,
+      "hoverTextColor": 13684944,
       "texture": "mainmenu/btn.png",
       "posX": 100,
       "posY": -30,
@@ -30,6 +30,7 @@
       imageWidth: 100,
       imageHeight: 50,
       "alignment": "left_center",
+      "hoverText": "No hoes?",
       "action": {
         "type": "openGui",
         "gui": "singleplayer"
@@ -38,7 +39,7 @@
     "multiplayer": {
       "text": "Multiplayer",
       "normalTextColor": 12303291,
-      "hoverTextColor": 3125670,
+      "hoverTextColor": 13684944,
       "texture": "mainmenu/btn.png",
       "posX": 100,
       "posY": -10,
@@ -47,6 +48,7 @@
       imageWidth: 100,
       imageHeight: 50,
       "alignment": "left_center",
+      "hoverText": "Rule them all!",
       "action": {
         "type": "openGui",
         "gui": "multiplayer"
@@ -56,7 +58,7 @@
     "options": {
       "text": "Options",
       "normalTextColor": 12303291,
-      "hoverTextColor": 3125670,
+      "hoverTextColor": 13684944,
       "texture": "mainmenu/btn.png",
       "posX": 100,
       "posY": 10,
@@ -88,7 +90,7 @@
     "clickgui": {
       "text": "Alt Manager",
       "normalTextColor": 12303291,
-      "hoverTextColor": 3125670,
+      "hoverTextColor": 13684944,
       "texture": "mainmenu/btn.png",
       "posX": 100,
       "posY": 50,
@@ -97,6 +99,7 @@
       imageWidth: 100,
       imageHeight: 50,
       "alignment": "left_center",
+      "hoverText": "Don't get caught!",
       "action": {
         "type": "openGui",
         "gui": "clickgui"
@@ -123,7 +126,7 @@
     "mods": {
       "text": "Mods (#modsloaded#/#modsactive#)",
       "normalTextColor": 6710886,
-      "hoverTextColor": 3125670,
+      "hoverTextColor": 13684944,
       "texture": "mainmenu/btn.png",
       "posX": 100,
       "posY": 100,
@@ -178,7 +181,7 @@
           "mainmenu/6.jpg"
         ],
         "displayDuration": 500,
-        "fadeDuration": 15,
+        "fadeDuration": 30,
         "shuffle": "true"
       }
     }
