@@ -66,12 +66,7 @@ public class Main {
     public void preInit(FMLPreInitializationEvent E) {
 
 
-        logger.info("   ____      _        _           _      ____ _ _            _  ");
-        logger.info("  / ___|__ _| |_ __ _| |_   _ ___| |_   / ___| (_) ___ _ __ | |_ ");
-        logger.info(" | |   / _` | __/ _` | | | | / __| __| | |   | | |/ _ \\ '_ \\| __|");
-        logger.info(" | |__| (_| | || (_| | | |_| \\__ \\ |_  | |___| | |  __/ | | | |_ ");
-        logger.info("  \\____\\__,_|\\__\\__,_|_|\\__, |___/\\__|  \\____|_|_|\\___|_| |_|\\__|");
-        logger.info("                        |___/                                    ");
+        logger.info("ReimoundBD");
         Display.setTitle("Initializing " + NAME + " " + VERSION);
         config = new Config();
         // Load Transparent

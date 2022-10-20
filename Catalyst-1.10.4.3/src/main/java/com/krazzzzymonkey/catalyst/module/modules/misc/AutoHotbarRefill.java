@@ -25,7 +25,7 @@ public class AutoHotbarRefill extends Modules {
 
     public AutoHotbarRefill() {
         super("AutoHotbarRefill", ModuleCategory.MISC, "Automatically refills items in your hotbar");
-        this.delay = new IntegerValue("DelayTime", 500, 20, 1000, "The time between each check");
+        this.delay = new IntegerValue("DelayTime", 500, 0, 500, "The time between each check");
         this.stackPercentage = new IntegerValue("RefillPercent", 50, 0, 99, "What percent should the stack be refilled");
         this.offHand = new BooleanValue("RefillOffhand", false, "Should it refill offhand");
 
