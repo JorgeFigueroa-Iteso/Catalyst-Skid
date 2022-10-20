@@ -12,7 +12,7 @@ import net.minecraft.network.play.client.CPacketPlayer;
 
 public class AntiHunger extends Modules {
     private final BooleanValue spoofSprint = new BooleanValue("SpoofSprint", true, "Spoofs packets to the server saying you are sprinting");
-    private final BooleanValue spoofGround = new BooleanValue("SpoofOnGround", true, "Spoofs movement packets to the server saying you are on the ground");
+    private final BooleanValue spoofGround = new BooleanValue("SpoofOnGround", false, "Spoofs movement packets to the server saying you are on the ground");
 
     public AntiHunger() {
         super("AntiHunger", ModuleCategory.PLAYER, "Prevents the player from loosing hunger");

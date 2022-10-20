@@ -33,8 +33,8 @@ public class AutoDupe extends Modules {
     public AutoDupe() {
         super("AutoDupe", ModuleCategory.MISC, "Does the Crafting Dupe automatically");
 
-        this.x = new IntegerValue("x", 50, 500, 2000, "");
-        this.y = new IntegerValue("y", 50, 500, 2000, "");
+        this.x = new IntegerValue("x", 500, 500, 2000, "");
+        this.y = new IntegerValue("y", 500, 500, 2000, "");
         this.addValue(x, y);
     }
 
