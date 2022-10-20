@@ -57,7 +57,7 @@ public class KillAura extends Modules {
         enemies = new BooleanValue("OnlyEnemies", false, "Only attack enemies");
         this.priority = new ModeValue("Priority", new Mode("Closest", true), new Mode("Health", false));
         tickDelay = new IntegerValue("TickDelay", 3, 0, 30, "The delay between attacks");
-        fov = new IntegerValue("FOV", 3, 0, 30, "Check if target is in a specified field of view");
+        fov = new IntegerValue("FOV", 3, 0, 70, "Check if target is in a specified field of view");
         walls = new BooleanValue("ThroughWalls", true, "Attacks people through walls");
         autoDelay = new BooleanValue("AutoDelay", true, "Automatically delays each attack to the cooldown of the weapon");
         packetRange = new DoubleValue("PacketRange", 10.0D, 1.0D, 100D, "The max range of the target to send the attack packet ");

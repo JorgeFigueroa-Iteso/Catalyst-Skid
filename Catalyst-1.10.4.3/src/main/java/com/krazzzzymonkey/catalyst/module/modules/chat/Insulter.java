@@ -83,7 +83,6 @@ public class Insulter extends Modules {
         "Stop being british {name}.",
         "Why do you eat beans and toast for breakfast {name}?",
         "You're really fucking ez {name}.",
-        "Imagine being like {name} and not having Catalyst xD",
         "You pvp like a quadriplegic {name}",
         "Your totems pop like bubblerap {name}",
         "What client do you use? rusherhack? {name}",

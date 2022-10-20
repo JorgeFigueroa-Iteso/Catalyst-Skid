@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
 public class RPC extends Modules {
 
     public RPC() {
-        super("CatalystRPC", ModuleCategory.MISC, "Discord Rich Presence");
+        super("DiscordRPC", ModuleCategory.MISC, "Discord Rich Presence");
     }
 
     boolean firstRun = false;

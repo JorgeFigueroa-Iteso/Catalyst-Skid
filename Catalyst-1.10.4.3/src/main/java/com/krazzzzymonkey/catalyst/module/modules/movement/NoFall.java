@@ -32,7 +32,7 @@ import java.util.ArrayList;
 public class NoFall extends Modules {
 
     public static ModeValue mode = new ModeValue("Mode", new Mode("Elytra", true), new Mode("Packet", false));
-    public static IntegerValue minFallDistance = new IntegerValue("FallDistance", 3, 1, 255, "How far the player must fall before any NoFall options will be triggered");
+    public static IntegerValue minFallDistance = new IntegerValue("FallDistance", 3, 1, 50, "How far the player must fall before any NoFall options will be triggered");
     //Elytra Mode Settings, put these into their own submenu
     public static ModeValue eDetectionMode = new ModeValue("ElytraTriggerMode", new Mode("CollisionSim", false), new Mode("RayTrace", true));
     public static IntegerValue eTriggerHeight = new IntegerValue("TriggerHeight", 10, 1, 60, "Specifies the distance to the ground at which your elytra will be deployed");

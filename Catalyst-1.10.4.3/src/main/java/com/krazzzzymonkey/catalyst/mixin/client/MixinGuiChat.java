@@ -1,5 +1,6 @@
 package com.krazzzzymonkey.catalyst.mixin.client;
 
+import com.krazzzzymonkey.catalyst.Main;
 import com.krazzzzymonkey.catalyst.command.Command;
 import com.krazzzzymonkey.catalyst.events.CommandEvent;
 import com.krazzzzymonkey.catalyst.managers.CommandManager;
@@ -33,7 +34,7 @@ public abstract class MixinGuiChat extends GuiScreen {
     public void drawScreen(int mouseX, int mouseY, float partialTicks, CallbackInfo ci) {
         CommandEvent.inputField = inputField.getText();
         if (inputField.getText().isEmpty()) {
-            Minecraft.getMinecraft().fontRenderer.drawStringWithShadow("Use " + CommandManager.prefix + "help for Catalyst commands.", 4, height - 12, -1);
+            Minecraft.getMinecraft().fontRenderer.drawStringWithShadow("Use " + CommandManager.prefix + "help for " + Main.NAME + " commands.", 4, height - 12, -1);
         }
         if (inputField.getText().startsWith(CommandManager.prefix)) {
             RenderUtils.drawBorderedRect(2, height - 14, width - 2, height - 2, 2, ColorUtils.rainbow().getRGB(), new Color(0, 0, 0, 0).getRGB());

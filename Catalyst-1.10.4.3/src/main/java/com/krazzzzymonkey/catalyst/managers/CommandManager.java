@@ -11,7 +11,7 @@ public class CommandManager {
     public static ArrayList<Command> commands = new ArrayList<>();
     private volatile static CommandManager instance;
 
-    public static String prefix = "~";
+    public static String prefix = "!";
 
     public CommandManager() {
         FileManager.loadPrefix();
