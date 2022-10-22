@@ -61,7 +61,7 @@ public class ModuleManager {
         addModule(new DurabilityAlert());
         addModule(new AutoMend());
         addModule(new BreakESP());
-        //addModule(new AutoCrystalRewrite());
+        addModule(new AutoCrystalRewrite());
         addModule(new FakePlayer());
         addModule(new AutoDupe());
         addModule(new ArmorHUD());

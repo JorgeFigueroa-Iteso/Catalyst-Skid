@@ -42,7 +42,7 @@ public class Watermark extends Modules {
         this.rainbow = new BooleanValue("Rainbow", true, "Makes the greeter cycle through colors");
         this.xOffset = new Number("X Offset", 0.0);
         this.yOffset = new Number("Y Offset", 0.0);
-        this.addValue(/*clientName, */smiley, colorValue, rainbow, xOffset, yOffset);
+        this.addValue(clientName, smiley, colorValue, rainbow, xOffset, yOffset);
     }
 
     String time;
@@ -76,7 +76,7 @@ public class Watermark extends Modules {
         if (ModuleManager.getModule("CustomFont").isToggled()) {
             Main.fontRenderer.drawStringWithShadow(str, x, y, color);
         } else {
-            Main.fontRenderer.drawStringWithShadow(str, x, y, color);
+            Wrapper.INSTANCE.fontRenderer().drawStringWithShadow(str, x, y, color);
         }
 
         if (Minecraft.getMinecraft().currentScreen instanceof HudGuiScreen) {
