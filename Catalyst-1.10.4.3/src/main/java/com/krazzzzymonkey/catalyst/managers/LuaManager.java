@@ -17,7 +17,7 @@ public class LuaManager {
 
     public static Mapper MAPPER;
 
-    public static boolean isInDevEnv = false;
+    public static boolean isInDevEnv = true;
 
     public LuaManager() {
         isInDevEnv = (boolean) Launch.blackboard.get("fml.deobfuscatedEnvironment");
@@ -35,7 +35,7 @@ public class LuaManager {
             throw new RuntimeException(e);
         }
         Arrays.stream(moduleDir.listFiles()).filter(n -> n.getName().endsWith(".lua")).forEach(n -> {
-            CustomModule customModule = new CustomModule(n.getName(), ModuleCategory.CUSTOM, "", n);
+            CustomModule customModule = new CustomModule(n.getName(), ModuleCategory.MISC, "", n);
             ModuleManager.addModule(customModule);
         });
     }

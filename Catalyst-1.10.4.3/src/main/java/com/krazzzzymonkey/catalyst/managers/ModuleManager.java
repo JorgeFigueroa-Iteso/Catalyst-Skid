@@ -18,6 +18,7 @@ import com.krazzzzymonkey.catalyst.module.modules.movement.*;
 import com.krazzzzymonkey.catalyst.module.modules.player.*;
 import com.krazzzzymonkey.catalyst.module.modules.render.*;
 import com.krazzzzymonkey.catalyst.module.modules.render.XRay;
+
 import com.krazzzzymonkey.catalyst.module.modules.world.*;
 import com.krazzzzymonkey.catalyst.utils.system.Wrapper;
 import com.krazzzzymonkey.catalyst.value.types.ModeValue;
@@ -60,7 +61,7 @@ public class ModuleManager {
         addModule(new DurabilityAlert());
         addModule(new AutoMend());
         addModule(new BreakESP());
-        addModule(new AutoCrystalRewrite());
+        //addModule(new AutoCrystalRewrite());
         addModule(new FakePlayer());
         addModule(new AutoDupe());
         addModule(new ArmorHUD());

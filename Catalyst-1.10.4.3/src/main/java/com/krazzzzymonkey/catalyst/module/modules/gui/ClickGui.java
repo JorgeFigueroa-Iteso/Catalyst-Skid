@@ -92,7 +92,7 @@ public class ClickGui extends Modules {
         rainbowMode = new ModeValue("RainbowMode", new Mode("RainbowFlow", true), new Mode("Static", false));
         rainbowSpeed = new IntegerValue("RainbowSpeed", 25, 0, 150, "The speed at which the rainbow flow is");
         rainbowHue = new DoubleValue("RainbowHue", 0.1, 0.1D, 1, "The difference of color between each module when in rainbow flow");
-        clickGuiScale = new Number("Scale", 0.97);
+        clickGuiScale = new Number("Scale", 1.0);
 
         this.addValue(clickGuiScale, tooltip, shadow, blur, clickGuiColor, clickGuiBackGroundColor, clickGuiToggledColor, rainbow, rainbowMode, rainbowSpeed, rainbowHue);
         setColor();

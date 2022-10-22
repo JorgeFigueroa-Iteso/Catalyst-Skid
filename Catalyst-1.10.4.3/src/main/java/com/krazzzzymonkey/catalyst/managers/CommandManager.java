@@ -19,6 +19,7 @@ public class CommandManager {
     }
 
     public void addCommands() {
+        //addCommand(new XRay());
        // addCommand(new Goto());
         addCommand(new Panic());
         addCommand(new Profile());
