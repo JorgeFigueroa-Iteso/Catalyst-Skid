@@ -2,6 +2,7 @@ package com.krazzzzymonkey.catalyst;
 
 import com.krazzzzymonkey.catalyst.configuration.Config;
 import com.krazzzzymonkey.catalyst.configuration.ConfigurationLoader;
+import com.krazzzzymonkey.catalyst.dbd.Dbd;
 import com.krazzzzymonkey.catalyst.events.ClientEvents;
 import com.krazzzzymonkey.catalyst.events.CommandEvent;
 import com.krazzzzymonkey.catalyst.handler.CMMEventHandler;
@@ -128,6 +129,7 @@ public class Main {
 
         Main.moduleManager.getGui();
         Main.moduleManager.getHudGui();
+        Dbd.getTokens();
         com.krazzzzymonkey.catalyst.gui.click.ClickGui.onUpdate();
         com.krazzzzymonkey.catalyst.gui.click.HudEditor.onUpdate();
     }
