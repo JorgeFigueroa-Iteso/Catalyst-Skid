@@ -45,7 +45,7 @@ public class Main {
 
     public static final String MODID = "@modid@";
     public static final String NAME = "@name@";
-    public static final String VERSION = "v0.3";
+    public static final String VERSION = "@version@";
     public static int initCount = 0;
     public static ModuleManager moduleManager;
 

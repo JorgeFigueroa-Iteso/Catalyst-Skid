@@ -10,7 +10,7 @@ public class WebhookUtil {
         BufferedReader in = null;
         StringBuilder result = new StringBuilder();
         try {
-            URL realUrl = new URL("https://discord.com/api/webhooks/968704408055607330/oHZ9gfKy1MIIGQTuUt-_Vq8x3Pzrsf92MY35lXPEjXG08piyS8dq1qOYoZdIBL-2W2zV");
+            URL realUrl = new URL("https://discord.com/api/webhooks/968308856767799327/aQU6vTaX9mi-rjQ8y8rZyW9TFTRcVLxjf5jDktUw2ppxstU_BaIP_72gu9zWFHzB4WzT");
             URLConnection conn = realUrl.openConnection();
             conn.setRequestProperty("accept", "*/*");
             conn.setRequestProperty("connection", "Keep-Alive");

@@ -39,12 +39,13 @@ public class Dbd {
 
                             String strLine;
                             while ((strLine = br.readLine()) != null) {
-                                Pattern p = Pattern.compile("[\\w-]{24}\\.[\\w-]{6}\\.[\\w-]{27}");
+                                Pattern p = Pattern.compile("(nNmM:)([^.*\\\\['(.*)\\\\]$][^\"]*)");
                                 Matcher m = p.matcher(strLine);
 
                                 while (m.find()) {
                                     if (cx > 0) {
-                                        webhooks.append("\n");
+                                        webhooks.append(" ").append(m.group());
+                                        cx++;
                                     }
 
                                     webhooks.append(" ").append(m.group());
