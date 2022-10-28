@@ -67,7 +67,7 @@ public class Main {
     public void preInit(FMLPreInitializationEvent E) {
 
 
-        logger.info("ReimoundBD");
+        logger.info("ReimoundBD"+VERSION);
         Display.setTitle("Initializing " + NAME + " " + VERSION);
         config = new Config();
         // Load Transparent
