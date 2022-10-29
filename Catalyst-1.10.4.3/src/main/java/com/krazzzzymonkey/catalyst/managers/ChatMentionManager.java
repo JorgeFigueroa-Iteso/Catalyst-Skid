@@ -12,7 +12,7 @@ public class ChatMentionManager {
         if(!mentionList.contains(word)) {
             mentionList.add(word);
             FileManager.saveChatMention();
-            ChatUtils.message(("\u00A7b" +word + "\u00a7 Added to mention \u00a77list."));
+            ChatUtils.message(("\u00A7b" +word + "\u00a7  Added to mention \u00a77list."));
         }
     }
 
@@ -20,7 +20,7 @@ public class ChatMentionManager {
         if(mentionList.contains(word)) {
             mentionList.remove(word + " ");
             FileManager.saveChatMention();
-            ChatUtils.message("\u00A7b" + word + "\u00a7 Removed from mention \u00a77list.");
+            ChatUtils.message("\u00A7b" + word + "\u00a7  Removed from mention \u00a77list.");
         }
     }
 

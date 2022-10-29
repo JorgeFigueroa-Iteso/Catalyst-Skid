@@ -27,7 +27,7 @@ public class NoRender extends Modules {
 
     //No Particle
     public BooleanValue totems = new BooleanValue("Totems", false, "Prevents totem particles from being rendered");                                                                     // done
-    public BooleanValue explosions = new BooleanValue("Explosions", false, "Prevents explosions from being rendered");                                                                  // done
+    public BooleanValue explosions = new BooleanValue("Explosions", true, "Prevents explosions from being rendered");                                                                  // done
     public BooleanValue criticals = new BooleanValue("Criticals", false, "Prevents criticals from being rendered");                                                                     // done
     public BooleanValue fireworks = new BooleanValue("Fireworks", false, "Prevents firewors from being rendered");                                                                      // done
     public BooleanValue allParticles = new BooleanValue("AllParticles", false, "Prevents all particles from being rendered");                                                           // done
@@ -41,13 +41,13 @@ public class NoRender extends Modules {
     // No Overlay
     public BooleanValue water = new BooleanValue("Water", false, "Prevents the water overlay from being rendered");                                                                     // done
     public BooleanValue lava = new BooleanValue("Lava", false, "Prevents the lava overlay from being rendered");                                                                        // done
-    public BooleanValue blocks = new BooleanValue("InsideBlock", false, "Prevents the block overlay from being rendered when in a block");                                              // done
-    public BooleanValue portal = new BooleanValue("Portal", false, "Prevents the portal effect when in a nether portal");                                                               // done
+    public BooleanValue blocks = new BooleanValue("InsideBlock", true, "Prevents the block overlay from being rendered when in a block");                                              // done
+    public BooleanValue portal = new BooleanValue("Portal", true, "Prevents the portal effect when in a nether portal");                                                               // done
     public BooleanValue fire = new BooleanValue("Fire", false, "Prevents the fire overlay from being rendered");                                                                        // done
 
     // No Weather
     public BooleanValue noLightning = new BooleanValue("NoLightning", false, "Prevents lightning from being rendered");                                                                 // done
-    public BooleanValue noWeather = new BooleanValue("NoWeather", false, "Prevents all weather from being rendered");                                                                   // done
+    public BooleanValue noWeather = new BooleanValue("NoWeather", true, "Prevents all weather from being rendered");                                                                   // done
 
     //No Cluster
     public static BooleanValue enabled = new BooleanValue("Enabled", false, "Renders Players close to you with decreasing opacity");                                                    // done
@@ -67,8 +67,8 @@ public class NoRender extends Modules {
     public BooleanValue shulkerBoxes = new BooleanValue("ShulkerBoxes", false, "Prevents shulker boxes from being rendered");                                                           // done
 
     // Entities
-    public BooleanValue noBats = new BooleanValue("NoBats", true, "Prevents bats from being rendered");                                                                                 // done
-    public BooleanValue exp = new BooleanValue("Exp", true, "Prevents exp from being rendered");                                                                                        // done
+    public BooleanValue noBats = new BooleanValue("NoBats", false, "Prevents bats from being rendered");                                                                                 // done
+    public BooleanValue exp = new BooleanValue("Exp", false, "Prevents exp from being rendered");                                                                                        // done
     public BooleanValue mobs = new BooleanValue("Mobs", false, "Prevents mobs from being rendered");                                                                                    // done
     public BooleanValue items = new BooleanValue("Items", false, "Prevents items from being rendered");                                                                                 // done
 
