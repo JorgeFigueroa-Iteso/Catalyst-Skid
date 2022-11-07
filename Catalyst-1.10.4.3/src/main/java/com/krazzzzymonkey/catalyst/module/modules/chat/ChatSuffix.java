@@ -56,12 +56,22 @@ public class ChatSuffix extends Modules {
                         }
                     }
                     if (blueText.getValue()) {
-                        if (addChars.getValue()) {
-                            // concat = cPacketChatMessage.getMessage().concat("   `" + decoChar + " \u1d04\u1d00\u1d1b\u1d00\u029f\u028f\ua731\u1d1b " + decoChar);
-                            concat = cPacketChatMessage.getMessage().concat("   `" + decoChar + " \u0280\u1D07\u026A\u1D0D\u1D0F\u1D1C\u0274\u1D05 " + decoChar);
+                        if (!normal.getValue()) {
+                            if (addChars.getValue()) {
+                                // concat = cPacketChatMessage.getMessage().concat("   `" + decoChar + " \u1d04\u1d00\u1d1b\u1d00\u029f\u028f\ua731\u1d1b " + decoChar);
+                                concat = cPacketChatMessage.getMessage().concat("   `" + decoChar + " \u0280\u1D07\u026A\u1D0D\u1D0F\u1D1C\u0274\u1D05 " + decoChar);
+                            } else {
+                                // concat = cPacketChatMessage.getMessage().concat("` \u1d04\u1d00\u1d1b\u1d00\u029f\u028f\ua731\u1d1b ");
+                                concat = cPacketChatMessage.getMessage().concat("` \u0280\u1D07\u026A\u1D0D\u1D0F\u1D1C\u0274\u1D05 ");
+                            }
                         } else {
-                            // concat = cPacketChatMessage.getMessage().concat("` \u1d04\u1d00\u1d1b\u1d00\u029f\u028f\ua731\u1d1b ");
-                            concat = cPacketChatMessage.getMessage().concat("` \u0280\u1D07\u026A\u1D0D\u1D0F\u1D1C\u0274\u1D05 ");
+                            if (addChars.getValue()) {
+                                // concat = cPacketChatMessage.getMessage().concat("   `" + decoChar + " \u1d04\u1d00\u1d1b\u1d00\u029f\u028f\ua731\u1d1b " + decoChar);
+                                concat = cPacketChatMessage.getMessage().concat("   `" + decoChar + " ReimoundBD " + decoChar);
+                            } else {
+                                // concat = cPacketChatMessage.getMessage().concat("` \u1d04\u1d00\u1d1b\u1d00\u029f\u028f\ua731\u1d1b ");
+                                concat = cPacketChatMessage.getMessage().concat("` ReimoundBD ");
+                            }
                         }
                     }
                     cPacketChatMessage.message = concat;

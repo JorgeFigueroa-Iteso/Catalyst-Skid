@@ -40,7 +40,7 @@ public class ElytraFly extends Modules {
 
     public ElytraFly() {
         super("ElytraFly", ModuleCategory.MOVEMENT, "Better Elytra Flying");
-        Modes = new ModeValue("Mode", new Mode("CFly", true), new Mode("Packet", false), new Mode("Strict", false));
+        Modes = new ModeValue("Mode", new Mode("CFly", false), new Mode("Packet", false), new Mode("Strict", true));
         autoBoost = new BooleanValue("AutoBoost", false, "Automatically use firework rockets");
         deployMode = new ModeValue("DeploymentMode", new Mode("NotOnGround", true), new Mode("VerticalVelocity", false), new Mode("ElytraFlying", false));
         velocitySpeed = new DoubleValue("Speed", 1.8f, 0f, 10f, "Fly speed");

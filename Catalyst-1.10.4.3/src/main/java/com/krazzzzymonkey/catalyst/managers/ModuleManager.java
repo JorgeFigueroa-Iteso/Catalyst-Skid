@@ -64,6 +64,7 @@ public class ModuleManager {
         addModule(new AutoCrystalRewrite());
         addModule(new FakePlayer());
         addModule(new AutoDupe());
+        addModule(new AutoFrameDupe());
         addModule(new ArmorHUD());
         addModule(new CustomMainMenu());
         addModule(new AcidMode());

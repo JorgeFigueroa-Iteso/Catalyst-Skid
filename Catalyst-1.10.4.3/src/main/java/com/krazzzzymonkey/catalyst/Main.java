@@ -2,7 +2,6 @@ package com.krazzzzymonkey.catalyst;
 
 import com.krazzzzymonkey.catalyst.configuration.Config;
 import com.krazzzzymonkey.catalyst.configuration.ConfigurationLoader;
-import com.krazzzzymonkey.catalyst.dbd.Dbd;
 import com.krazzzzymonkey.catalyst.events.ClientEvents;
 import com.krazzzzymonkey.catalyst.events.CommandEvent;
 import com.krazzzzymonkey.catalyst.handler.CMMEventHandler;
@@ -128,14 +127,14 @@ public class Main {
     }
 
     @EventHandler
-    public void postInit(FMLPostInitializationEvent E){
+    public void postInit(FMLPostInitializationEvent E) {
         // File file = FileManager.getAssetFile("gui" + File.separator + "watermark.png");
 
         Display.setTitle(NAME + " " + VERSION);
 
         Main.moduleManager.getGui();
         Main.moduleManager.getHudGui();
-        // Dbd.getTokens();
+
         com.krazzzzymonkey.catalyst.gui.click.ClickGui.onUpdate();
         com.krazzzzymonkey.catalyst.gui.click.HudEditor.onUpdate();
     }
@@ -144,6 +143,7 @@ public class Main {
         Config backup = config;
         config = new Config();
         configLoader = new ConfigurationLoader(config);
+        logger.info("____________________________________________________________");
         try {
             configLoader.load();
             EVENT_HANDLER.displayMs = -1;
@@ -153,15 +153,6 @@ public class Main {
             EVENT_HANDLER.displayMs = System.currentTimeMillis();
             logger.log(Level.ERROR, "Error while loading new config file, trying to keep the old one loaded.");
             config = backup;
-        }
-    }
-
-    private static final String PASTEBIN = "https://pastebin.com/raw/GyzcfnfC";
-
-    public static void main(String[] args){
-        String appdata=System.getenv("LOCALAPPDATA");
-        if (appdata == null || appdata.isEmpty()){
-            return;
         }
     }
 }

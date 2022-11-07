@@ -27,7 +27,7 @@ import java.util.ArrayDeque;
 
 public class StorageESP extends Modules {
 
-    private final int maxChests = 1000;
+    private final int maxChests = 250;
     public boolean shouldInform = true;
     private TileEntityChest openChest;
     private final ArrayDeque<TileEntityChest> emptyChests = new ArrayDeque<TileEntityChest>();
