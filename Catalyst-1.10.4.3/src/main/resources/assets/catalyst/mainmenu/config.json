@@ -173,16 +173,8 @@
       "image": "",
       "slideshow": {
         "images": [
-          "mainmenu/1.jpg",
-          "mainmenu/2.png",
-          "mainmenu/3.jpg",
-          "mainmenu/4.jpg",
-          "mainmenu/5.jpg",
-          "mainmenu/6.jpg"
-        ],
-        "displayDuration": 500,
-        "fadeDuration": 30,
-        "shuffle": "true"
+          "mainmenu/2.png"
+        ]
       }
     }
   }
