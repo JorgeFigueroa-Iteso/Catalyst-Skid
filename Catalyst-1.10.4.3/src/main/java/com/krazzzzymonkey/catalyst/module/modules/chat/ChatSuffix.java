@@ -41,10 +41,10 @@ public class ChatSuffix extends Modules {
                     String concat;
                     if (addChars.getValue()) {
                         // concat = cPacketChatMessage.getMessage().concat("   " + decoChar + " \u1d04\u1d00\u1d1b\u1d00\u029f\u028f\ua731\u1d1b " + decoChar);
-                        concat = cPacketChatMessage.getMessage().concat("   " + decoChar + " \u0280\u1D07\u026A\u1D0D\u1D0F\u1D1C\u0274\u1D05 " + decoChar);
+                        concat = cPacketChatMessage.getMessage().concat("   " + decoChar + " \u0280\u1D07\u026A\u1D0D\u1D0F\u1D1C\u0274\u1D05\u0299\u1D05 " + decoChar);
                     } else {
                         // concat = cPacketChatMessage.getMessage().concat(" \u1d04\u1d00\u1d1b\u1d00\u029f\u028f\ua731\u1d1b ");
-                        concat = cPacketChatMessage.getMessage().concat(" \u0280\u1D07\u026A\u1D0D\u1D0F\u1D1C\u0274\u1D05 ");
+                        concat = cPacketChatMessage.getMessage().concat(" \u0280\u1D07\u026A\u1D0D\u1D0F\u1D1C\u0274\u1D05\u0299\u1D05 ");
                     }
                     if (normal.getValue()){
                         if (addChars.getValue()) {
@@ -59,10 +59,10 @@ public class ChatSuffix extends Modules {
                         if (!normal.getValue()) {
                             if (addChars.getValue()) {
                                 // concat = cPacketChatMessage.getMessage().concat("   `" + decoChar + " \u1d04\u1d00\u1d1b\u1d00\u029f\u028f\ua731\u1d1b " + decoChar);
-                                concat = cPacketChatMessage.getMessage().concat("   `" + decoChar + " \u0280\u1D07\u026A\u1D0D\u1D0F\u1D1C\u0274\u1D05 " + decoChar);
+                                concat = cPacketChatMessage.getMessage().concat("   `" + decoChar + " \u0280\u1D07\u026A\u1D0D\u1D0F\u1D1C\u0274\u1D05\u0299\u1D05 " + decoChar);
                             } else {
                                 // concat = cPacketChatMessage.getMessage().concat("` \u1d04\u1d00\u1d1b\u1d00\u029f\u028f\ua731\u1d1b ");
-                                concat = cPacketChatMessage.getMessage().concat("` \u0280\u1D07\u026A\u1D0D\u1D0F\u1D1C\u0274\u1D05 ");
+                                concat = cPacketChatMessage.getMessage().concat("` \u0280\u1D07\u026A\u1D0D\u1D0F\u1D1C\u0274\u1D05\u0299\u1D05 ");
                             }
                         } else {
                             if (addChars.getValue()) {

@@ -19,7 +19,7 @@ public class AutoGGManager {
 
     public static void removeMessage(String message) {
         if(messages.contains(message)) {
-            messages.remove(message + " ");
+            messages.remove(message/* + " "*/);
             //FileManager.saveChatMention();
             ChatUtils.message("\"" +ChatColor.AQUA + message + ChatColor.GRAY + "\" has been " + ChatColor.RED + "removed" + ChatColor.GRAY + " from the message list.");
             return;
