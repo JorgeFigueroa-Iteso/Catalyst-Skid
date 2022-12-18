@@ -8,6 +8,9 @@ import com.krazzzzymonkey.catalyst.managers.TimerManager;
 import com.krazzzzymonkey.catalyst.module.ModuleCategory;
 import com.krazzzzymonkey.catalyst.module.Modules;
 import com.krazzzzymonkey.catalyst.utils.InventoryUtils;
+import com.krazzzzymonkey.catalyst.utils.system.Wrapper;
+import com.krazzzzymonkey.catalyst.utils.visual.ChatUtils;
+import net.minecraft.client.Minecraft;
 import com.krazzzzymonkey.catalyst.value.Mode;
 import com.krazzzzymonkey.catalyst.value.sliders.IntegerValue;
 import com.krazzzzymonkey.catalyst.value.types.BooleanValue;
@@ -15,15 +18,23 @@ import com.krazzzzymonkey.catalyst.value.types.ModeValue;
 import com.krazzzzymonkey.catalyst.value.types.SubMenu;
 import dev.tigr.simpleevents.listener.EventHandler;
 import dev.tigr.simpleevents.listener.EventListener;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.AbstractClientPlayer;
+import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.GuiDownloadTerrain;
+import net.minecraft.entity.Entity;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ClickType;
+import net.minecraft.network.Packet;
 import net.minecraft.network.play.client.CPacketConfirmTeleport;
 import net.minecraft.network.play.client.CPacketEntityAction;
 import net.minecraft.network.play.client.CPacketPlayer;
 import net.minecraft.network.play.server.SPacketPlayerPosLook;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.Vec3d;
+import net.minecraftforge.fml.common.eventhandler.EventBus;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
 
 import java.util.ArrayList;
 
@@ -89,26 +100,23 @@ public class NoFall extends Modules {
                     }
                 }
             }
-            else if (mode.getMode("Vanilla").isToggled()) {
-                // Use a packet to set the position at the height of the fall distance
-
-                //ChatUtils.message("Using Vanilla");
-                if (mc.player.fallDistance > 0.5f) {
-                    // Set position of the packet when falling, this will prevent fall damage
-                    mc.player.connection.sendPacket(new CPacketPlayer.Position(mc.player.posX, mc.player.posY - mc.player.fallDistance + 0, mc.player.posZ, true));
-                    // Send a packet to confirm the teleport
-                    mc.player.connection.sendPacket(new CPacketConfirmTeleport(teleportId++));
-                    // Set the fall distance to the max fall damage
-                    mc.player.fallDistance = 0;
-                    //ChatUtils.message("Sent packet");
-                }
-            }
         }
         if (mc.player.onGround && sentPacket) {
             if (eUseTimer.getValue()) {
                 TimerManager.getMultiplier(entryID).setEnabled(false);
             }
             sentPacket = false;
+        }
+    });
+
+    @EventHandler
+    private final EventListener<PlayerUpdateEvent> onPLayerFall = new EventListener<>(event -> {
+        if (!mode.getMode("Vanilla").isToggled()) { return; }
+        if (mc.player.fallDistance > 2.5f) {
+            //Send packet to set distance at 2.5f from the ground
+            Packet packet = new CPacketPlayer.Position(mc.player.posX, mc.player.posY - 0.1f, mc.player.posZ, true);
+            mc.player.connection.sendPacket(packet);
+            //ChatUtils.message("Sent packet");
         }
     });
 
@@ -136,17 +144,6 @@ public class NoFall extends Modules {
                 mc.player.connection.sendPacket(new CPacketConfirmTeleport(teleportId));
                 mc.player.connection.sendPacket(new CPacketConfirmTeleport(teleportId + 1));
             }
-        }
-    });
-
-    // NoFall Vanilla Mode
-    @EventHandler
-    private final EventListener<PlayerUpdateEvent> getOnPlayerUpdate = new EventListener<>(event -> {
-        if (!mode.getMode("Vanilla").isToggled()) return;
-        if (mc.player.fallDistance > minFallDistance.getValue()) {
-            mc.player.motionY = 0;
-            mc.player.fallDistance = 0;
-            mc.player.connection.sendPacket(new CPacketEntityAction(mc.player, CPacketEntityAction.Action.START_FALL_FLYING));
         }
     });
 

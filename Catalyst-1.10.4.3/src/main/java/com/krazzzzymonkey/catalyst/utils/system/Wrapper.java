@@ -5,6 +5,7 @@ import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.settings.GameSettings;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.network.Packet;
 
@@ -14,7 +15,9 @@ import java.awt.datatransfer.StringSelection;
 public class Wrapper {
 
 	public static volatile Wrapper INSTANCE = new Wrapper();
-	
+
+
+
     public Minecraft mc() {
         return Minecraft.getMinecraft();
     }
@@ -42,7 +45,7 @@ public class Wrapper {
     public void sendPacket(Packet packet) {
         this.player().connection.sendPacket(packet);
     }
-    
+
     public void copy(String content) {
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new StringSelection(content), null);
     }
