@@ -123,6 +123,11 @@ public class FastBreak extends Modules {
     @EventHandler
     private final EventListener<LeftClickBlockEvent> onLeftClickBlock = new EventListener<>(e -> {
         if (modes.getMode("Packet").isToggled()) {
+            // Reset block breaking progress when clicking a block
+            if (canBreak(e.getPos())) {
+                mc.playerController.resetBlockRemoving();
+            }
+
             float progress = PlayerControllerUtils.getCurBlockDamageMP() + BlockUtils.getHardness(e.getPos());
 
             if (progress >= 1) {

@@ -4,13 +4,10 @@ import com.krazzzzymonkey.catalyst.events.ClientTickEvent;
 import com.krazzzzymonkey.catalyst.events.PacketEvent;
 import com.krazzzzymonkey.catalyst.events.PlayerMoveEvent;
 import com.krazzzzymonkey.catalyst.events.PlayerUpdateEvent;
-import com.krazzzzymonkey.catalyst.managers.ModuleManager;
 import com.krazzzzymonkey.catalyst.managers.TimerManager;
 import com.krazzzzymonkey.catalyst.module.ModuleCategory;
 import com.krazzzzymonkey.catalyst.module.Modules;
-import com.krazzzzymonkey.catalyst.module.modules.world.Timer;
 import com.krazzzzymonkey.catalyst.utils.InventoryUtils;
-import com.krazzzzymonkey.catalyst.utils.visual.ChatUtils;
 import com.krazzzzymonkey.catalyst.value.Mode;
 import com.krazzzzymonkey.catalyst.value.sliders.IntegerValue;
 import com.krazzzzymonkey.catalyst.value.types.BooleanValue;
@@ -21,7 +18,6 @@ import dev.tigr.simpleevents.listener.EventListener;
 import net.minecraft.client.gui.GuiDownloadTerrain;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ClickType;
-import net.minecraft.network.Packet;
 import net.minecraft.network.play.client.CPacketConfirmTeleport;
 import net.minecraft.network.play.client.CPacketEntityAction;
 import net.minecraft.network.play.client.CPacketPlayer;
@@ -92,7 +88,8 @@ public class NoFall extends Modules {
                         }
                     }
                 }
-            } else if (mode.getMode("Vanilla").isToggled()) {
+            }
+            else if (mode.getMode("Vanilla").isToggled()) {
                 // Use a packet to set the position at the height of the fall distance
 
                 //ChatUtils.message("Using Vanilla");
@@ -139,6 +136,17 @@ public class NoFall extends Modules {
                 mc.player.connection.sendPacket(new CPacketConfirmTeleport(teleportId));
                 mc.player.connection.sendPacket(new CPacketConfirmTeleport(teleportId + 1));
             }
+        }
+    });
+
+    // NoFall Vanilla Mode
+    @EventHandler
+    private final EventListener<PlayerUpdateEvent> getOnPlayerUpdate = new EventListener<>(event -> {
+        if (!mode.getMode("Vanilla").isToggled()) return;
+        if (mc.player.fallDistance > minFallDistance.getValue()) {
+            mc.player.motionY = 0;
+            mc.player.fallDistance = 0;
+            mc.player.connection.sendPacket(new CPacketEntityAction(mc.player, CPacketEntityAction.Action.START_FALL_FLYING));
         }
     });
 

@@ -25,7 +25,7 @@ public class Bind extends Command
 			for(Modules hack : ModuleManager.getModules()) {
 				if(hack.getModuleName().equalsIgnoreCase(args[0])) {
 					hack.setKey(Keyboard.getKeyIndex((args[1].toUpperCase())));
-			 		ChatUtils.normalMessage(ChatColor.RED + hack.getModuleName() + ChatColor.GRAY + " keybind changed to " + ChatColor.GREEN + Keyboard.getKeyName(hack.getKey()));
+					ChatUtils.normalMessage(ChatColor.RED + hack.getModuleName() + ChatColor.GRAY + " keybind changed to " + ChatColor.GREEN + Keyboard.getKeyName(hack.getKey()));
 				}
 			}
 		}

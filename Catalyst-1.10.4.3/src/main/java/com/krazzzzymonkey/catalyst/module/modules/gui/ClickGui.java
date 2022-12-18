@@ -1,19 +1,13 @@
 package com.krazzzzymonkey.catalyst.module.modules.gui;
 
 import com.krazzzzymonkey.catalyst.Main;
-import com.krazzzzymonkey.catalyst.command.Command;
-import com.krazzzzymonkey.catalyst.events.*;
-import com.krazzzzymonkey.catalyst.gui.chest.CustomGuiChest;
+import com.krazzzzymonkey.catalyst.events.ClientTickEvent;
+import com.krazzzzymonkey.catalyst.events.RenderGameOverlayEvent;
 import com.krazzzzymonkey.catalyst.gui.click.ClickGuiScreen;
-import com.krazzzzymonkey.catalyst.managers.*;
+import com.krazzzzymonkey.catalyst.managers.FileManager;
+import com.krazzzzymonkey.catalyst.managers.ProfileManager;
 import com.krazzzzymonkey.catalyst.module.ModuleCategory;
 import com.krazzzzymonkey.catalyst.module.Modules;
-import com.krazzzzymonkey.catalyst.module.modules.chat.ChatMention;
-import com.krazzzzymonkey.catalyst.module.modules.chat.CustomChat;
-import com.krazzzzymonkey.catalyst.module.modules.misc.NoEntityTrace;
-import com.krazzzzymonkey.catalyst.module.modules.misc.Sounds;
-import com.krazzzzymonkey.catalyst.module.modules.render.*;
-import com.krazzzzymonkey.catalyst.module.modules.world.Scaffold;
 import com.krazzzzymonkey.catalyst.utils.system.Wrapper;
 import com.krazzzzymonkey.catalyst.utils.visual.ColorUtils;
 import com.krazzzzymonkey.catalyst.utils.visual.RenderUtils;
@@ -26,39 +20,15 @@ import com.krazzzzymonkey.catalyst.value.types.ModeValue;
 import com.krazzzzymonkey.catalyst.value.types.Number;
 import dev.tigr.simpleevents.listener.EventHandler;
 import dev.tigr.simpleevents.listener.EventListener;
-import net.minecraft.block.Block;
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiChat;
 import net.minecraft.client.gui.GuiIngameMenu;
-import net.minecraft.client.gui.GuiTextField;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.gui.inventory.GuiContainer;
-import net.minecraft.client.model.ModelBase;
-import net.minecraft.client.renderer.GlStateManager;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.MoverType;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHandSide;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 import org.lwjgl.input.Keyboard;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
-
-import static com.krazzzzymonkey.catalyst.managers.ModuleManager.EVENT_MANAGER;
 
 //TODO FIX SLIDERS, FIX DRAGGING THE WRONG FRAME
 //BIG BIG BIG TODO, REFACTOR THIS MIXIN FUCKERY TO A MixinProxy class TO COMMUNICATE WITH THE OBFED CLIENT AND THE NON OBFED MIXINS
@@ -77,6 +47,8 @@ public class ClickGui extends Modules {
     public static ColorValue clickGuiToggledColor;
 
     private static int color;
+
+    private static int[] defaultColor = new int[]{255, 255, 255, 255};
 
 
     public ClickGui() {
