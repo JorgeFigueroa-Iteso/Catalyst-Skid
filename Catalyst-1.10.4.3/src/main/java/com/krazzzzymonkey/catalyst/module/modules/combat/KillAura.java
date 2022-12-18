@@ -50,14 +50,14 @@ public class KillAura extends Modules {
     public KillAura() {
         super("KillAura", ModuleCategory.COMBAT, "Automatically attacks entities for you");
         players = new BooleanValue("Players", true, "Attack players");
-        passiveMobs = new BooleanValue("PassiveMobs", false, "Attack passive mobs");
-        hostileMobs = new BooleanValue("HostileMobs", false, "Attack hostile mobs");
+        passiveMobs = new BooleanValue("PassiveMobs", false, "Attack passive mobs/animals");
+        hostileMobs = new BooleanValue("HostileMobs", false, "Attack hostile mobs/monsters");
         neutralMobs = new BooleanValue("NeutralMobs", false, "Attack neutral mobs like enderman or pigman");
         invisibles = new BooleanValue("Invisibles", true, "Attack invisible entities");
         enemies = new BooleanValue("OnlyEnemies", false, "Only attack enemies");
         this.priority = new ModeValue("Priority", new Mode("Closest", true), new Mode("Health", false));
         tickDelay = new IntegerValue("TickDelay", 3, 0, 30, "The delay between attacks");
-        fov = new IntegerValue("FOV", 3, 0, 70, "Check if target is in a specified field of view");
+        fov = new IntegerValue("FOV", 70, 0, 70, "Check if target is in a specified field of view");
         walls = new BooleanValue("ThroughWalls", true, "Attacks people through walls");
         autoDelay = new BooleanValue("AutoDelay", true, "Automatically delays each attack to the cooldown of the weapon");
         packetRange = new DoubleValue("PacketRange", 10.0D, 1.0D, 100D, "The max range of the target to send the attack packet ");

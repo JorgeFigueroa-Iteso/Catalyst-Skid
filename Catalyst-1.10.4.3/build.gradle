@@ -22,7 +22,7 @@ apply plugin: "org.jetbrains.gradle.plugin.idea-ext"
 
 group = project.mod_group
 archivesBaseName = project.mod_name
-version = "v1.3"
+version = "v2.1"
 /*
 version = { ->
     def pattern = 'v[0-9]*'

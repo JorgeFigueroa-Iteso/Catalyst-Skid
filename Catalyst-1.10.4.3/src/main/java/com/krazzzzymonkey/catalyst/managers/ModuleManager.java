@@ -238,7 +238,6 @@ public class ModuleManager {
         return this.hudManager;
     }
 
-
     public static Modules getModule(String name) {
         Modules module = null;
         for (Modules m : getModules()) {

@@ -12,7 +12,7 @@ public class AutoGGManager {
     public static void addMessage(String message) {
         if(!messages.contains(message)) {
             messages.add(message);
-           // FileManager.saveChatMention();
+            FileManager.saveMessages();
             ChatUtils.message("\"" +ChatColor.AQUA + message + ChatColor.GRAY + "\" has been " + ChatColor.GREEN + "added" + ChatColor.GRAY + " to message list.");
         }
     }
@@ -20,7 +20,7 @@ public class AutoGGManager {
     public static void removeMessage(String message) {
         if(messages.contains(message)) {
             messages.remove(message/* + " "*/);
-            //FileManager.saveChatMention();
+            FileManager.saveMessages();
             ChatUtils.message("\"" +ChatColor.AQUA + message + ChatColor.GRAY + "\" has been " + ChatColor.RED + "removed" + ChatColor.GRAY + " from the message list.");
             return;
         }

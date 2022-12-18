@@ -23,17 +23,14 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.io.*;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 import java.util.regex.Matcher;
 
 public class FileManager {
 
     public static final Path CATALYST_DIR = Wrapper.INSTANCE.mc().gameDir.toPath().resolve(Main.NAME);
     public static final Path ASSET_DIR = CATALYST_DIR.resolve("Assets");
-    public static final Path ALT_DIR = CATALYST_DIR.resolve("Reimound Account Manager");
+    public static final Path ALT_DIR = CATALYST_DIR.resolve(Main.NAME +" Account Manager");
     public static final Path PROFILES_DIR = CATALYST_DIR.resolve("Profiles");
     private static final File HACKS = PROFILES_DIR.resolve("default.json").toFile();
     public static final File CLICKGUI = CATALYST_DIR.resolve("clickgui.json").toFile();
@@ -725,7 +722,7 @@ public class FileManager {
             loadFont();
         }
         if (!AUTOGGMESSAGES.exists()) {
-            AutoGGManager.messages.add("GG {name}! ReimoundBD ontop.");
+            AutoGGManager.messages.add("GG {name}! BuddyPlus ontop.");
             saveMessages();
         } else {
             loadMessages();

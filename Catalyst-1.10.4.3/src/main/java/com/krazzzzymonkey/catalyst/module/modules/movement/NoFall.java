@@ -10,6 +10,7 @@ import com.krazzzzymonkey.catalyst.module.ModuleCategory;
 import com.krazzzzymonkey.catalyst.module.Modules;
 import com.krazzzzymonkey.catalyst.module.modules.world.Timer;
 import com.krazzzzymonkey.catalyst.utils.InventoryUtils;
+import com.krazzzzymonkey.catalyst.utils.visual.ChatUtils;
 import com.krazzzzymonkey.catalyst.value.Mode;
 import com.krazzzzymonkey.catalyst.value.sliders.IntegerValue;
 import com.krazzzzymonkey.catalyst.value.types.BooleanValue;
@@ -20,6 +21,7 @@ import dev.tigr.simpleevents.listener.EventListener;
 import net.minecraft.client.gui.GuiDownloadTerrain;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ClickType;
+import net.minecraft.network.Packet;
 import net.minecraft.network.play.client.CPacketConfirmTeleport;
 import net.minecraft.network.play.client.CPacketEntityAction;
 import net.minecraft.network.play.client.CPacketPlayer;
@@ -31,14 +33,14 @@ import java.util.ArrayList;
 
 public class NoFall extends Modules {
 
-    public static ModeValue mode = new ModeValue("Mode", new Mode("Elytra", true), new Mode("Packet", false));
+    public static ModeValue mode = new ModeValue("Mode", new Mode("Vanilla", true), new Mode("Elytra", false), new Mode("Packet", false));
     public static IntegerValue minFallDistance = new IntegerValue("FallDistance", 3, 1, 50, "How far the player must fall before any NoFall options will be triggered");
+
     //Elytra Mode Settings, put these into their own submenu
     public static ModeValue eDetectionMode = new ModeValue("ElytraTriggerMode", new Mode("CollisionSim", false), new Mode("RayTrace", true));
     public static IntegerValue eTriggerHeight = new IntegerValue("TriggerHeight", 10, 1, 60, "Specifies the distance to the ground at which your elytra will be deployed");
     public static BooleanValue eEquipElytra = new BooleanValue("EquipElytra", false, "Allows the client to replace your chestplate with an elytra while falling");
     public static BooleanValue eUseTimer = new BooleanValue("UseTimer", false, "Uses timer to slow down your game before hitting the ground");
-
     SubMenu eSubMenu = new SubMenu("Elytra", eDetectionMode, eTriggerHeight, eEquipElytra, eUseTimer);
 
     public NoFall() {
@@ -89,6 +91,19 @@ public class NoFall extends Modules {
                             break;
                         }
                     }
+                }
+            } else if (mode.getMode("Vanilla").isToggled()) {
+                // Use a packet to set the position at the height of the fall distance
+
+                //ChatUtils.message("Using Vanilla");
+                if (mc.player.fallDistance > 0.5f) {
+                    // Set position of the packet when falling, this will prevent fall damage
+                    mc.player.connection.sendPacket(new CPacketPlayer.Position(mc.player.posX, mc.player.posY - mc.player.fallDistance + 0, mc.player.posZ, true));
+                    // Send a packet to confirm the teleport
+                    mc.player.connection.sendPacket(new CPacketConfirmTeleport(teleportId++));
+                    // Set the fall distance to the max fall damage
+                    mc.player.fallDistance = 0;
+                    //ChatUtils.message("Sent packet");
                 }
             }
         }

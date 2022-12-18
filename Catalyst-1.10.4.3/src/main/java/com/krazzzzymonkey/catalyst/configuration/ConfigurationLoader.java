@@ -4,6 +4,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.stream.JsonReader;
+import com.krazzzzymonkey.catalyst.Main;
 import com.krazzzzymonkey.catalyst.gui.GuiCustom;
 import org.apache.commons.io.FileUtils;
 
@@ -25,7 +26,7 @@ public class ConfigurationLoader {
     public void load() throws Exception {
         JsonParser jsonParser = new JsonParser();
 
-        File configFolder = CATALYST_DIR.resolve("ReimoundMainMenu").toFile();
+        File configFolder = CATALYST_DIR.resolve(Main.NAME+"MainMenu").toFile();
         if (!configFolder.exists()) {
             configFolder.mkdir();
         }

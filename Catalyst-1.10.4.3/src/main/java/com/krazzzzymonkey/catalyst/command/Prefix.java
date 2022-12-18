@@ -1,5 +1,6 @@
 package com.krazzzzymonkey.catalyst.command;
 
+import com.krazzzzymonkey.catalyst.Main;
 import com.krazzzzymonkey.catalyst.managers.CommandManager;
 import com.krazzzzymonkey.catalyst.managers.FileManager;
 import com.krazzzzymonkey.catalyst.utils.ChatColor;
@@ -21,7 +22,7 @@ public class Prefix extends Command {
         CommandManager.prefix =  args[0];
         FileManager.savePrefix();
 
-        ChatUtils.normalMessage("Set ReimoundBD prefix to: " + ChatColor.AQUA + CommandManager.prefix);
+        ChatUtils.normalMessage("Set " + Main.NAME + " prefix to: " + ChatColor.AQUA + CommandManager.prefix);
 
     }
 

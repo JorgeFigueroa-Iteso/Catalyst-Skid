@@ -80,6 +80,7 @@ public class AutoCrystal extends Modules {
     public BooleanValue rainbow;
     public BooleanValue raytrace;
     public BooleanValue autoSwitch;
+    public BooleanValue silentSwitch;
 
     public BooleanValue onePointThirteen;
 
@@ -109,6 +110,8 @@ public class AutoCrystal extends Modules {
         rainbow = new BooleanValue("EspRainbow", false, "");
         espColor = new ColorValue("EspColor", Color.CYAN.getRGB(), "");
         espHeight = new IntegerValue("EspHeight", 1, 0, 2, "");
+
+        silentSwitch = new BooleanValue("SilentSwitch", false, "");
 
         this.renderMode = new ModeValue("RenderMode", new Mode("Full", false), new Mode("Outline", true));
         this.addValue(onePointThirteen, explode, waitTick, range, walls, antiWeakness, nodesync, noGappleSwitch, place, autoSwitch, minDmg, minHitDmg, facePlace, raytrace, rotate, spoofRotations, maxSelfDmg, rainbow, espColor, espHeight, renderMode);
@@ -325,6 +328,7 @@ public class AutoCrystal extends Modules {
             }
             isActive = false;
         }
+
     });
 
     @EventHandler

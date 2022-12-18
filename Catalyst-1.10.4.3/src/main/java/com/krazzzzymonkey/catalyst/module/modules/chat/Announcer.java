@@ -1,5 +1,6 @@
 package com.krazzzzymonkey.catalyst.module.modules.chat;
 
+import com.krazzzzymonkey.catalyst.Main;
 import com.krazzzzymonkey.catalyst.events.ClientTickEvent;
 import com.krazzzzymonkey.catalyst.events.PacketEvent;
 import com.krazzzzymonkey.catalyst.events.ReachEvent;
@@ -65,7 +66,7 @@ public class Announcer extends Modules {
         eatItem = new BooleanValue("ItemEat", true, "Announces when you eat food");
         throwItem = new BooleanValue("ItemThrow", true, "Announces when you throw an item out of your inventory");
         booleanSneak = new BooleanValue("Sneaking", true, "Announces when you sneak");
-        booleanGui = new BooleanValue("Click Gui", true, "Announces when you open the ReimoundBD ClickGui");
+        booleanGui = new BooleanValue("Click Gui", true, "Announces when you open the "+ Main.NAME+" ClickGui");
         enchantItem = new BooleanValue("EnchantItem", true, "Announces when you enchant an item");
         jumping = new BooleanValue("Jumping", true, "Announces when you jump");
         // booleanGainHealth = new BooleanValue("GainHealth", true);
@@ -75,18 +76,18 @@ public class Announcer extends Modules {
     }
 
 
-    public static String walkMessage = "I just walked {blocks} blocks thanks to ReimoundBD!";
-    public static String throwMessage = "I just threw {amount} {name} thanks to ReimoundBD! ";
-    public static String placeMessage = "I just placed {amount} {name} thanks to ReimoundBD!";
-    public static String jumpMessage = "I just jumped thanks to ReimoundBD!";
-    public static String sneakMessage = "I started sneaking thanks to ReimoundBD!";
-    public static String unSneakMessage = "I stopped sneaking thanks to ReimoundBD!";
-    public static String breakMessage = "I just broke {amount} {name} thanks to ReimoundBD!";
-    public static String attackMessage = "I just attacked {name} with a {item} thanks to ReimoundBD!";
-    public static String eatMessage = "I just ate {amount} {name} thanks to ReimoundBD!";
-    public static String openGuiMessage = "I just opened ReimoundBD ClickGUI!";
-    public static String closeGuiMessage = "I just closed ReimoundBD ClickGUI!";
-    public static String enchantMessage = "I just enchanted an item thanks to ReimoundBD!";
+    public static String walkMessage = "I just walked {blocks} blocks thanks to "+Main.NAME+"!";
+    public static String throwMessage = "I just threw {amount} {name} thanks to "+Main.NAME+"! ";
+    public static String placeMessage = "I just placed {amount} {name} thanks to "+Main.NAME+"!";
+    public static String jumpMessage = "I just jumped thanks to "+Main.NAME+"!";
+    public static String sneakMessage = "I started sneaking thanks to "+Main.NAME+"!";
+    public static String unSneakMessage = "I stopped sneaking thanks to "+Main.NAME+"!";
+    public static String breakMessage = "I just broke {amount} {name} thanks to "+Main.NAME+"!";
+    public static String attackMessage = "I just attacked {name} with a {item} thanks to "+Main.NAME+"!";
+    public static String eatMessage = "I just ate {amount} {name} thanks to "+Main.NAME+"!";
+    public static String openGuiMessage = "I just opened "+Main.NAME+" ClickGUI!";
+    public static String closeGuiMessage = "I just closed "+Main.NAME+" ClickGUI!";
+    public static String enchantMessage = "I just enchanted an item thanks to "+Main.NAME+"!";
 
     int blocksPlaced = 0;
     int blocksBroken = 0;

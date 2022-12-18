@@ -1,5 +1,6 @@
 package com.krazzzzymonkey.catalyst.command;
 
+import com.krazzzzymonkey.catalyst.Main;
 import com.krazzzzymonkey.catalyst.managers.ModuleManager;
 import com.krazzzzymonkey.catalyst.module.ModuleCategory;
 import com.krazzzzymonkey.catalyst.module.Modules;
@@ -52,7 +53,7 @@ public class Panic extends Command {
 
     @Override
     public String getDescription() {
-        return "Disables all modules in ReimoundBD";
+        return "Disables all modules in " + Main.NAME;
     }
 
     @Override

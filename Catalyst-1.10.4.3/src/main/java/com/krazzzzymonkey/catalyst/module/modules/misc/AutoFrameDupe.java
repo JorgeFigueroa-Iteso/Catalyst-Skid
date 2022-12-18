@@ -25,7 +25,7 @@ public class AutoFrameDupe extends Modules {
     public AutoFrameDupe(){
         super("AutoFrameDupe", ModuleCategory.MISC, "Does the Frame Dupe automatically");
         shulkeronly = new BooleanValue("Only Shulker",false,"Dupe only shulkers");
-        range = new IntegerValue("Range",5,0,6,"Dupe only shulkers");
+        range = new IntegerValue("Range",5,0,6,"Range to search for frames");
         turns = new IntegerValue("Turns",1,0,3,"Turn's per tick");
         ticks = new IntegerValue("Ticks",10,1,20,"Ammount of tick per server tick");
 

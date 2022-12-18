@@ -22,11 +22,11 @@ public class ChatUtils {
 
     public static void message(String message) {
         if(Minecraft.getMinecraft().player == null)return;
-        Minecraft.getMinecraft().ingameGUI.getChatGUI().printChatMessageWithOptionalDeletion(new TextComponentTranslation("\u00a78[" + ChatColor.RESET + Main.NAME + "\u00a78]\u00a77 " + message), 582956);
+        Minecraft.getMinecraft().ingameGUI.getChatGUI().printChatMessageWithOptionalDeletion(new TextComponentTranslation("\u00a77[" + ChatColor.RESET + Main.NAME + "\u00a77]\u00a77 " + message), 582956);
 
     }
     public static void normalMessage(String message) {
-        component(new TextComponentTranslation("\u00a78[" + ChatColor.RESET + Main.NAME + "\u00a78]\u00a77 " +message));
+        component(new TextComponentTranslation("\u00a77[" + ChatColor.RESET + Main.NAME + "\u00a77]\u00a77 " +message));
     }
 
     public static void normalChat(String message) {

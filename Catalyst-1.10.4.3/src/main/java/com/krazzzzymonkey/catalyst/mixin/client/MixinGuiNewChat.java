@@ -5,6 +5,7 @@ import com.krazzzzymonkey.catalyst.managers.ChatMentionManager;
 import com.krazzzzymonkey.catalyst.managers.ModuleManager;
 import com.krazzzzymonkey.catalyst.module.modules.chat.ChatMention;
 import com.krazzzzymonkey.catalyst.module.modules.chat.CustomChat;
+import com.krazzzzymonkey.catalyst.utils.ChatColor;
 import com.krazzzzymonkey.catalyst.utils.visual.ColorUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ChatLine;
@@ -120,18 +121,24 @@ public abstract class MixinGuiNewChat extends Gui {
                                 }
                                 GlStateManager.enableBlend();
 
-                                if (s.startsWith("\u00a78[" + "\u00A7r" + Main.NAME + "\u00a78]\u00a77")) {
+                                if (s.startsWith("\u00a78[" + ChatColor.RESET + Main.NAME + "\u00a78]\u00a77")) { // With RGB
                                     if (ModuleManager.getModule("CustomChat").isToggledValue("CustomFont") && ModuleManager.getModule("CustomChat").isToggled()) {
                                         CustomChat.fontRenderer.drawStringWithShadow(s, (double) 0.0, (double) (j2 - 8), (int) (rainbow.getRGB() + (l1 << 24)));
                                     } else
                                         this.mc.fontRenderer.drawStringWithShadow(s, 0.0F, (float) (j2 - 8), rainbow.getRGB() + (l1 << 24));
-                                } else {
+                                }
+                                else if (s.startsWith("\u00a77[" + ChatColor.RESET + Main.NAME + "\u00a77]\u00a77")) { // Purple
+                                    if (ModuleManager.getModule("CustomChat").isToggledValue("CustomFont") && ModuleManager.getModule("CustomChat").isToggled()) {
+                                        CustomChat.fontRenderer.drawStringWithShadow(s, (double) 0.0, (double) (j2 - 8), (int) (12799171 + (l1 << 24)));
+                                    } else
+                                        this.mc.fontRenderer.drawStringWithShadow(s, 0.0F, (float) (j2 - 8), 12799171 + (l1 << 24));
+                                }
+                                else { // White
                                     if (ModuleManager.getModule("CustomChat").isToggledValue("CustomFont") && ModuleManager.getModule("CustomChat").isToggled()) {
                                         CustomChat.fontRenderer.drawStringWithShadow(s, (double) 0.0, (double) (j2 - 8), (int) (16777215 + (l1 << 24)));
                                     } else
                                         this.mc.fontRenderer.drawStringWithShadow(s, 0.0F, (float) (j2 - 8), 16777215 + (l1 << 24));
                                 }
-
                                 GlStateManager.disableAlpha();
                                 GlStateManager.disableBlend();
                             }

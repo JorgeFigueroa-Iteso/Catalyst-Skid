@@ -1,5 +1,6 @@
 package com.krazzzzymonkey.catalyst.gui.click.theme.dark;
 
+import com.krazzzzymonkey.catalyst.Main;
 import com.krazzzzymonkey.catalyst.gui.click.base.ComponentType;
 import com.krazzzzymonkey.catalyst.gui.click.theme.Theme;
 import com.krazzzzymonkey.catalyst.utils.system.Wrapper;
@@ -7,7 +8,7 @@ import com.krazzzzymonkey.catalyst.utils.system.Wrapper;
 public class DarkTheme extends Theme {
 
     public DarkTheme() {
-        super("ReimoundDark");
+        super(Main.NAME+"Dark");
         this.fontRenderer = Wrapper.INSTANCE.fontRenderer();
         addRenderer(ComponentType.FRAME, new DarkFrame(this));
         addRenderer(ComponentType.BUTTON, new DarkButton(this));

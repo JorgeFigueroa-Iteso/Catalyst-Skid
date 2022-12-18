@@ -85,9 +85,9 @@ public class ClickGui extends Modules {
         tooltip = new BooleanValue("Tooltip", true, "Shows these tooltips you are reading right now");
         shadow = new BooleanValue("Shadow", true, "Darkens the background of the click gui");
         blur = new BooleanValue("Blur", true   , "Blurs the background of the click gui");
-        clickGuiColor = new ColorValue("HeaderColor", Color.CYAN, "Changes the header color of the click gui");
+        clickGuiColor = new ColorValue("HeaderColor", Color.GRAY, "Changes the header color of the click gui");
         clickGuiBackGroundColor = new ColorValue("BackgroundColor", Color.BLACK, "Changes the background color of the click gui");
-        clickGuiToggledColor = new ColorValue("ToggledColor", Color.CYAN, "Changes the color of all toggled modules in the click gui");
+        clickGuiToggledColor = new ColorValue("ToggledColor", Color.LIGHT_GRAY, "Changes the color of all toggled modules in the click gui");
         rainbow = new BooleanValue("Rainbow", true, "Makes the whole click gui cycle through colors");
         rainbowMode = new ModeValue("RainbowMode", new Mode("RainbowFlow", true), new Mode("Static", false));
         rainbowSpeed = new IntegerValue("RainbowSpeed", 25, 0, 150, "The speed at which the rainbow flow is");

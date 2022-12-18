@@ -1,5 +1,6 @@
 package com.krazzzzymonkey.catalyst.module.modules.chat;
 
+import com.krazzzzymonkey.catalyst.Main;
 import com.krazzzzymonkey.catalyst.events.ClientTickEvent;
 import com.krazzzzymonkey.catalyst.events.PacketEvent;
 import com.krazzzzymonkey.catalyst.managers.AutoGGManager;
@@ -140,7 +141,7 @@ public class AutoGG extends Modules {
         if (AutoGGManager.messages.size() > 0)
             message = AutoGGManager.messages.get(index);
         else
-            message = "GG {name}, ReimoundBD is on top!";
+            message = "GG {name}, "+ Main.NAME+" on top!";
 
         String messageSanitized = message.replace("{name}", name);
         if (messageSanitized.length() > 255) {

@@ -4,6 +4,7 @@ package com.krazzzzymonkey.catalyst.module;
 import com.krazzzzymonkey.catalyst.Main;
 import com.krazzzzymonkey.catalyst.gui.click.ClickGuiScreen;
 import com.krazzzzymonkey.catalyst.managers.ModuleManager;
+import com.krazzzzymonkey.catalyst.module.modules.chat.CustomChat;
 import com.krazzzzymonkey.catalyst.utils.ChatColor;
 import com.krazzzzymonkey.catalyst.utils.system.Wrapper;
 import com.krazzzzymonkey.catalyst.utils.visual.ChatUtils;
@@ -289,11 +290,12 @@ public class Modules extends Thread {
         if (this.toggled) {
             this.onEnable();
             if (ModuleManager.getModule("ToggleMessages").isToggled() && mc.player != null)
-                ChatUtils.message(ChatColor.GRAY + this.getModuleName() + ChatColor.DARK_GREEN + " ON");
+                ChatUtils.message(ChatColor.GRAY + "[" + ChatColor.DARK_PURPLE + this.getModuleName() + ChatColor.GRAY + "]" + ChatColor.DARK_GREEN + " ON");
         } else {
             this.onDisable();
             if (ModuleManager.getModule("ToggleMessages").isToggled() && mc.player != null)
-                ChatUtils.message(ChatColor.GRAY + this.getModuleName() + ChatColor.DARK_RED + " OFF");
+                ChatUtils.message(ChatColor.GRAY + "[" + ChatColor.DARK_PURPLE + this.getModuleName() + ChatColor.GRAY + "]" + ChatColor.DARK_RED + " OFF");
+
         }
 
         RenderUtils.splashTickPos = 0;

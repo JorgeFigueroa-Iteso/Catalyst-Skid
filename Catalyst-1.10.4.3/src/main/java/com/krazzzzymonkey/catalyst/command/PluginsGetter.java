@@ -41,7 +41,7 @@ public class PluginsGetter extends Command {
         if (!plugins.isEmpty()) {
             // TODO: is this weird?
             // plugins.sort(String.CASE_INSENSITIVE_ORDER);
-            ChatUtils.message("Plugins \u00a77(\u00a78" + plugins.size() + "\u00a77): \u00a79" + Strings.join(plugins.toArray(new String[0]), "\u00a77, \u00a79"));
+            ChatUtils.message("Plugins \u00a77(\u00a78" + plugins.size() + "\u00a77): \u00a7c" + Strings.join(plugins.toArray(new String[0]), "\u00a77, \u00a7c"));
         } else {
             ChatUtils.error("No plugins found.");
         }

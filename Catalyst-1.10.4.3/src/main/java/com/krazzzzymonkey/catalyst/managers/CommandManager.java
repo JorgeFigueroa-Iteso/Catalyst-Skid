@@ -20,7 +20,7 @@ public class CommandManager {
 
     public void addCommands() {
         //addCommand(new XRay());
-       // addCommand(new Goto());
+        // addCommand(new Goto());
         addCommand(new Panic());
         addCommand(new Profile());
         addCommand(new Toggle());
@@ -44,6 +44,7 @@ public class CommandManager {
         addCommand(new PeekBook());
         addCommand(new Font());
         addCommand(new AutoGG());
+        addCommand(new Name());
         addCommand(new FaceTowards());/*
         addCommand(new MapDump());
         addCommand(new NbtDump());*/

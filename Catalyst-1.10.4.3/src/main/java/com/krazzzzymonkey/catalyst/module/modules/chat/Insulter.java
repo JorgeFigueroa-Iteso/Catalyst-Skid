@@ -28,7 +28,7 @@ public class Insulter extends Modules {
     public Insulter() {
         super("Insulter", ModuleCategory.CHAT, "Insults random players in chat");
         settingDelay = new IntegerValue("Delay", 50, 1, 500, "");
-        greenText = new BooleanValue("GreenText", true, "");
+        greenText = new BooleanValue("GreenText", false, "");
 
         this.addValue(settingDelay, greenText);
     }
