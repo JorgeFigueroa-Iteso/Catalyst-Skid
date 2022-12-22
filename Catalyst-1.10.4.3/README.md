@@ -17,4 +17,12 @@ gradlew clean
 ```
 gradlew build
 ```
+If you are using IntelliJ, follow the instructions below to setup the project.
 
+```
+Right Click on build.gradle
+
+Open with IntelliJ
+
+Wait and let it load
+```
