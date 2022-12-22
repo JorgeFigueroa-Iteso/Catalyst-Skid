@@ -31,8 +31,8 @@ public class PasteBuilder {
     private final String visibility = "unlisted";
     private final List<PasteFile> files = new ArrayList<>();
 
-    private String name = "Catalyst Client";
-    private String description = "Get Catalyst at: catalyst.sexy";
+    private String name = "BuddyPlus";
+    private String description = "Get BuddyPlus at: Reimound#4975";
     private String expires = ZonedDateTime.now(ZoneOffset.UTC).plusDays(7).toString();
 
     private static Data upload(String output) throws IOException {

@@ -5,15 +5,8 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiPlayerTabOverlay;
 import net.minecraft.client.network.NetHandlerPlayClient;
 import net.minecraft.client.network.NetworkPlayerInfo;
-import net.minecraft.entity.passive.AbstractHorse;
-import net.minecraft.init.Items;
-import net.minecraft.inventory.ClickType;
-import net.minecraft.item.ItemStack;
-import net.minecraft.network.play.client.CPacketEntityAction;
 
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -50,9 +43,14 @@ public class MsgAll extends Command {
         (new Thread(() -> {
             try {
                 for (String player : players) {
-                    Minecraft.getMinecraft().player.sendChatMessage("/msg " + player + " " + message + " " + getAlphaNumericString(5));
-                    ChatUtils.normalMessage(" Sent: /msg " + player + " " + message+ " " + getAlphaNumericString(5));
-                    Thread.sleep(2000);
+                    if (!player.equals(mc.player.getName())) {
+                        Minecraft.getMinecraft().player.sendChatMessage("/msg " + player + " " + message + " " + getAlphaNumericString(5));
+                        ChatUtils.normalMessage(" Sent: /msg " + player + ": " + message + " " + getAlphaNumericString(5));
+                        Thread.sleep(2000);
+                    } else {
+                        System.out.println("Skipped: " + player);
+                        // ChatUtils.error("Skipped: " + player);
+                    }
                 }
             } catch (Exception ignored) {
             }

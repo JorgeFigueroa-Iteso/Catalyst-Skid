@@ -34,7 +34,7 @@ public class Help extends Command {
                     ChatUtils.normalChat(ChatColor.GRAY + "          ➥ " + hack.getDescription());
                     return;
                 }
-            }ChatUtils.normalMessage("Module " + args[0] + " not found.");
+            }ChatUtils.normalMessage("Command " + args[0] + " not found.");
         }
     }
 

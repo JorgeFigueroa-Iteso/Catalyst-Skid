@@ -52,7 +52,6 @@ public class Main {
     public static CFontRenderer smallFontRenderer;
     public static LuaManager luaManager;
 
-
     @Instance(value = MODID)
     public static Main INSTANCE;
     public static CMMEventHandler EVENT_HANDLER;

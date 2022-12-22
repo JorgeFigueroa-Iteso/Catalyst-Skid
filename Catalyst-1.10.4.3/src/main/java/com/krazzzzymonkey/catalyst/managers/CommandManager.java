@@ -19,8 +19,6 @@ public class CommandManager {
     }
 
     public void addCommands() {
-        //addCommand(new XRay());
-        // addCommand(new Goto());
         addCommand(new Panic());
         addCommand(new Profile());
         addCommand(new Toggle());
@@ -29,7 +27,7 @@ public class CommandManager {
         addCommand(new NameHistory());
         addCommand(new MsgAll());
         addCommand(new Help());
-        addCommand(new Module());
+        addCommand(new Modules());
         addCommand(new Bind());
         addCommand(new VClip());
         addCommand(new ChatMention());
@@ -44,12 +42,22 @@ public class CommandManager {
         addCommand(new PeekBook());
         addCommand(new Font());
         addCommand(new AutoGG());
-        addCommand(new Name());
-        addCommand(new FaceTowards());/*
-        addCommand(new MapDump());
-        addCommand(new NbtDump());*/
+        addCommand(new FaceTowards());
         addCommand(new PluginsGetter());
         addCommand(new InventoryCleaner());
+
+        /*addCommand(new MapDump());
+        addCommand(new NbtDump());
+        addCommand(new XRay());
+        addCommand(new Goto());*/
+
+        // --------------------------------------------------- \\
+
+        addCommand(new Say());
+        addCommand(new Module());
+        addCommand(new Save());
+        addCommand(new Coords());
+
         commands.sort(Comparator.comparing(Command::getCommand));
     }
 

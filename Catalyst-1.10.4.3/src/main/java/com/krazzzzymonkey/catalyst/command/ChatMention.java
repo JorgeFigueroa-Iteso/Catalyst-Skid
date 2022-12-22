@@ -26,6 +26,10 @@ public class ChatMention extends Command
             if(args[0].equalsIgnoreCase("clear")) {
                 ChatMentionManager.clear();
             }
+            else
+            if (args[0].equalsIgnoreCase("list")) {
+                ChatMentionManager.listMention();
+            }
         }
         catch(Exception e)
         {
@@ -42,6 +46,6 @@ public class ChatMention extends Command
     @Override
     public String getSyntax()
     {
-        return "chatmention <add/remove/clear> <word>";
+        return "chatmention <add/remove/list/clear> <word>";
     }
 }

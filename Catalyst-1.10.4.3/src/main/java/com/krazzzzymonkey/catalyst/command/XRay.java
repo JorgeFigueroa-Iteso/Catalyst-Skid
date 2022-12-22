@@ -25,14 +25,14 @@ public class XRay extends Command
 			if(args[0].equalsIgnoreCase("add")) {
 				if(args[1].equalsIgnoreCase("mouse") && Wrapper.INSTANCE.mc().objectMouseOver != null) {
 					RayTraceResult object = Wrapper.INSTANCE.mc().objectMouseOver;
-				
+
 					if(object.typeOfHit == RayTraceResult.Type.BLOCK) {
-						
+
 						BlockPos block = object.getBlockPos();
 						IBlockState state = Wrapper.INSTANCE.world().getBlockState(block);
 						int id = Block.getIdFromBlock(state.getBlock());
 						int meta =  state.getBlock().getMetaFromState(state);
-						
+
 						XRayData data = new XRayData(id, meta, Utils.random(0, 254), Utils.random(0, 254), Utils.random(0, 254));
 						XRayManager.addData(data);
 					}
@@ -54,8 +54,8 @@ public class XRay extends Command
 									Integer.parseInt(args[4])));
 					}
 				}
-				
-				
+
+
 			}
 			else
 			if(args[0].equalsIgnoreCase("remove")) {

@@ -1,9 +1,6 @@
 package com.krazzzzymonkey.catalyst.events;
 
 
-import com.krazzzzymonkey.catalyst.command.Module;
-import dev.tigr.simpleevents.event.Event;
-
 public class MotionEvent extends ClientEvent {
 
     public MotionEvent() {

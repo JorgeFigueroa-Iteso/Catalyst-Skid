@@ -1,5 +1,6 @@
 package com.krazzzzymonkey.catalyst.managers;
 
+import com.krazzzzymonkey.catalyst.utils.ChatColor;
 import com.krazzzzymonkey.catalyst.utils.visual.ChatUtils;
 
 import java.util.ArrayList;
@@ -12,15 +13,28 @@ public class ChatMentionManager {
         if(!mentionList.contains(word)) {
             mentionList.add(word);
             FileManager.saveChatMention();
-            ChatUtils.message(("\u00A7b" +word + "\u00a7  Added to mention \u00a77list."));
+            ChatUtils.message((ChatColor.AQUA + word + ChatColor.GREEN + " Added " + ChatColor.GRAY + "to mention list."));
+        }
+        else {
+            ChatUtils.error("Word already in mention list!");
         }
     }
 
     public static void removeMention(String word) {
         if(mentionList.contains(word)) {
-            mentionList.remove(word + " ");
+            //mentionList.remove(word + " ");
+            mentionList.remove(word);
             FileManager.saveChatMention();
-            ChatUtils.message("\u00A7b" + word + "\u00a7  Removed from mention \u00a77list.");
+            ChatUtils.message(ChatColor.AQUA + word + ChatColor.RED + " Removed " + ChatColor.GRAY + "from mention list.");
+        } else {
+            ChatUtils.error("Word not found in mention list!");
+        }
+    }
+
+    public static void listMention() {
+        ChatUtils.normalMessage(ChatColor.GRAY + "Mention list:");
+        for(String word : mentionList) {
+            ChatUtils.normalMessage(ChatColor.RED + word);
         }
     }
 

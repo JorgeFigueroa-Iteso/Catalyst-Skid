@@ -22,7 +22,7 @@ apply plugin: "org.jetbrains.gradle.plugin.idea-ext"
 
 group = project.mod_group
 archivesBaseName = project.mod_name
-version = "v2.1"
+version = "v2.2"
 /*
 version = { ->
     def pattern = 'v[0-9]*'
@@ -161,6 +161,7 @@ shadowJar {
     exclude 'dummyThing'
     exclude 'LICENSE.txt'
     classifier = 'shadow'
+    destinationDir = file("C:\\Users\\Reimound\\AppData\\Roaming\\.minecraft\\mods")
 }
 
 mixin {

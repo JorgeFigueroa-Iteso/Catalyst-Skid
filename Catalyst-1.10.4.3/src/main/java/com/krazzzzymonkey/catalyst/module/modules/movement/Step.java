@@ -26,7 +26,7 @@ public class Step extends Modules {
     public Step() {
         super("Step", ModuleCategory.MOVEMENT, "Allows you to walk up blocks greater than one");
 
-        this.mode = new ModeValue("Mode",new Mode("NCP", true), new Mode("AAC", false), new Mode("Simple", false));
+        this.mode = new ModeValue("Mode",new Mode("Simple", true), new Mode("AAC", false), new Mode("NCP", false));
         height = new DoubleValue("Height", 2D, 0D, 10D, "The height you want to step");
         this.addValue(mode, height);
     }

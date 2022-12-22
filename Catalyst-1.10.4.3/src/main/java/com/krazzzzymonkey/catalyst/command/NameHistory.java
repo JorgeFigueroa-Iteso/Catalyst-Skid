@@ -83,33 +83,9 @@ public class NameHistory extends Command implements Runnable {
 
         }catch (Exception e){
 
-            ChatUtils.error("Something went wrong");
+            // ChatUtils.error("Something went wrong");
 
             e.printStackTrace();
         }
-//
-//        URL nameurl = null;
-//        try {
-//            nameurl = new URL("https://api.mojang.com/user/profiles/" + uuid + "/names");
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-//        }
-//        URLConnection yc = null;
-//        try {
-//            yc = nameurl.openConnection();
-//            BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
-//            String inputLine;
-//            StringBuilder str = new StringBuilder();
-//            while ((inputLine = in.readLine()) != null) {
-//                str.append(inputLine);
-//            }
-//            ChatUtils.message(str.toString());
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//
-
-        }
     }
+}

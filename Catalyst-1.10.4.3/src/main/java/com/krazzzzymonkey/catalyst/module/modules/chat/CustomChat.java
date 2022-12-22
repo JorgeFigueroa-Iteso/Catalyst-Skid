@@ -5,13 +5,14 @@ import com.krazzzzymonkey.catalyst.module.ModuleCategory;
 import com.krazzzzymonkey.catalyst.module.Modules;
 import com.krazzzzymonkey.catalyst.utils.font.CFontRenderer;
 import com.krazzzzymonkey.catalyst.value.types.BooleanValue;
+import dev.tigr.simpleevents.listener.EventHandler;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.awt.*;
 
 public class CustomChat extends Modules {
 
 //todo yeet all the other chat altering things in here
-
 
     public static BooleanValue customFont;
     public static BooleanValue background;
@@ -25,7 +26,4 @@ public class CustomChat extends Modules {
 
         this.addValue(customFont, background);
     }
-
-
-
 }
