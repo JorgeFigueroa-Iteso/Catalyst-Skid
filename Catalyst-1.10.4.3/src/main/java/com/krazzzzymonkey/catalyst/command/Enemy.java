@@ -40,6 +40,10 @@ public class Enemy extends Command
 			if(args[0].equalsIgnoreCase("clear")) {
 				EnemyManager.clear();
 			}
+            else
+            if(args[0].equalsIgnoreCase("list")) {
+                EnemyManager.enemyList();
+            }
 		}
 		catch(Exception e)
 		{
@@ -56,6 +60,6 @@ public class Enemy extends Command
 	@Override
 	public String getSyntax()
 	{
-		return "enemy <add/remove/clear> <nick>";
+		return "enemy <add/remove/list/clear> <nick>";
 	}
 }

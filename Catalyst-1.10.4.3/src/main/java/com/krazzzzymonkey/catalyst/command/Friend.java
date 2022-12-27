@@ -6,7 +6,8 @@ import com.krazzzzymonkey.catalyst.utils.system.Wrapper;
 import com.krazzzzymonkey.catalyst.utils.visual.ChatUtils;
 import net.minecraft.entity.player.EntityPlayer;
 
-public class Friend extends Command
+public class
+Friend extends Command
 {
 	public Friend()
 	{
@@ -17,7 +18,7 @@ public class Friend extends Command
 	public void runCommand(String s, String[] args)
 	{
 		try
-		{	
+		{
 			if(args[0].equalsIgnoreCase("add")) {
 				if(args[1].equalsIgnoreCase("all")) {
 					for(Object object : Wrapper.INSTANCE.world().loadedEntityList) {
@@ -40,6 +41,10 @@ public class Friend extends Command
 			if(args[0].equalsIgnoreCase("clear")) {
 				FriendManager.clear();
 			}
+            else
+            if(args[0].equalsIgnoreCase("list")) {
+                FriendManager.friendList();
+            }
 		}
 		catch(Exception e)
 		{
@@ -56,6 +61,6 @@ public class Friend extends Command
 	@Override
 	public String getSyntax()
 	{
-		return "friend <add/remove/clear> <nick>";
+		return "friend <add/remove/list/clear> <nick>";
 	}
 }

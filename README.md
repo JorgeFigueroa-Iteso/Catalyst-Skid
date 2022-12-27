@@ -1,10 +1,28 @@
-# Catalyst-Skid
- Catalyst Client Skid
+Minecaft Forge Utility Mod Designed for the anarchy environment.
+Made By Krazzzzymonkey, blockparole and Pr3roxDLC  
+Artwork by LilGanja1337  
+<p align="center">
+Building The Source
+</p>
+Use cmd/terminal to build the client with gradlew using the following commads.
 
 ```
-Catalyst whent public, and the developers will stop Updating this client
+gradlew setupdecompworkspace
 ```
 
 ```
-So here's a Skid by me, only to get top satisfaction while playing
+gradlew clean
+```
+
+```
+gradlew build
+```
+If you are using IntelliJ, follow the instructions below to setup the project.
+
+```
+Right Click on build.gradle
+
+Open with IntelliJ
+
+Wait and let it load
 ```

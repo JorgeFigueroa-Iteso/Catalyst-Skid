@@ -83,7 +83,7 @@ public class AutoCrystalRewrite extends Modules {
     final BooleanValue spoofPlaceSwing = new BooleanValue("SpoofPlaceSwing", true, "Stops sending the swing animation when placing a crystal");
     final ModeValue swing = new ModeValue("BreakSwing", new Mode("Mainhand", true), new Mode("Offhand", false), new Mode("Cancel", false));
     final BooleanValue raytrace = new BooleanValue("Raytrace", false, "Checks if crystal can be seen by the player");
-    final ModeValue autoSwitch = new ModeValue("AutoSwitch", new Mode("Nothing", false), new Mode("Everything", false), new Mode("NoGapSwitch", true), new Mode("SilentSwitch", false));
+    final ModeValue autoSwitch = new ModeValue("AutoSwitch", new Mode("Nothing", false), new Mode("Everything", false), new Mode("NoGapSwitch", false), new Mode("SilentSwitch", true));
     final BooleanValue multiThreaded = new BooleanValue("MultiThreaded", false, "Handles every crystal on a different thread");
     final BooleanValue packetBlockPredict = new BooleanValue("PacketBlockPredict", true, "Predicts when crystal block doesn't have a crystal on it anymore, then places a new crystal");
     final BooleanValue packetCrystalPredict = new BooleanValue("PacketCrystalPredict", true, "Predicts when a crystal has been attacked, then places a new crystal");
