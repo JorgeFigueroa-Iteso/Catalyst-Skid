@@ -1,6 +1,12 @@
-Minecaft Forge Utility Mod Designed for the anarchy environment.
-Made By Krazzzzymonkey, blockparole and Pr3roxDLC  
-Artwork by LilGanja1337  
+Skid by Reimound
+
+<p align="center">
+About
+</p>
+
+- Catalist Source (src.zip)
+- Skid buildable
+
 <p align="center">
 Building The Source
 </p>
